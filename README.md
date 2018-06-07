@@ -2,7 +2,21 @@
 
 ## Workshop
 
-The student will deploy and monitor a web application that has been deployed to Azure IaaS in this Hands-on Lab (HOL). Azure security and management services will be used to manage and monitor the operational performance and security of the underlying infrastructure. Azure Application Insights will be used to monitor performance, application usage, and identify the cause of any application issues that emerge.
+This workshop is designed to teach attendees how to design a hybrid cloud architecture using a combination of the Azure public cloud and Azure Stack. This functional architecture will enable customers to leverage their investments in Azure as a "cloud platform," rather than Azure as a "place." Attendees will learn to determine which systems are good candidates for the Azure public cloud and which are better suited on Azure Stack.
+
+After completing workshop, attendees will be better able to recommend and design hybrid cloud systems that leverage one application and deployment model: Azure.
+
+In addition, attendees will learn to:
+
+-   Understand when the Azure public cloud versus Azure Stack is appropriate based on customer requirements.
+
+-   Describe possible integrations between Azure public cloud solutions and Azure Stack
+
+-   Understand the taxonomy of Azure Stack: tenants, regions, subscriptions, offers, plans, services and quotas.
+
+-   Describe the resource providers that are available for use with Azure Stack.
+
+-   Design and deploy hybrid connectivity between Azure public cloud and Azure Stack.
 
 ## Whiteboard Design Session
 TBD
