@@ -59,9 +59,9 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 1.  Launch an elevated PowerShell console and execute the following commands:
     ```
-    Cd C:\\AzureStackOnAzureVM
+    cd C:\AzureStackOnAzureVM
 
-    .\\Install-ASDK,.ps1
+    .\Install-ASDK,.ps1
     ```
 
 When prompted enter:
@@ -109,9 +109,11 @@ When prompted enter:
 
 6.  Next, execute the following command to remove any previous versions of Azure PowerShell:
 
-Get-Module -ListAvailable \| where-Object {\$\_.Name -like "Azure\*"} \| Uninstall-Module
+    ```
+    Get-Module -ListAvailable | where-Object {$_.Name -like "Azure*"} | Uninstall-Module
+    ```
 
-Note: You may see several errors, you can ignore these.
+    > Note: You may see several errors, you can ignore these.
 
 7.  Remove any folders in the following folder that begin with Azure (if any).
     ```

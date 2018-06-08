@@ -144,11 +144,15 @@ The following screenshot shows the installer executable:
 
 1.  Change to the **AppServiceHelperScripts** folder by executing the following command in an elevated PowerShell console:
 
-CD C:\\HOL\\AppServiceHelperScripts
+    ```
+    CD C:\\HOL\\AppServiceHelperScripts
+    ```
 
 2.  Create certificates that the Azure App service resource provider will need by running the following command:
 
-.\\Create-AppServiceCerts.ps1
+    ```
+    .\\Create-AppServiceCerts.ps1
+    ```
 
 When prompted use the following values:
 
@@ -333,7 +337,7 @@ When prompted specify the following:
 
 2.  Click **Deploy App Service or upgrade to the latest version**.
 
-> ![In the Microsoft Azure App Service 1.1 window, the Deploy App Service or upgrade to the latest version radio button is called out.](images/Hands-onlabstep-by-step-AzureStackimages/media/image40.png "App Service window")
+    ![In the Microsoft Azure App Service 1.1 window, the Deploy App Service or upgrade to the latest version radio button is called out.](images/Hands-onlabstep-by-step-AzureStackimages/media/image40.png "App Service window")
 
 3.  Review and accept the Microsoft Software License Terms and then click **Next**.
 
@@ -759,7 +763,9 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 **Note:** If the clipboard copy does not work, you can use the following sample text for your environment. You will need to alter this text to match your configuration.
 
+```
 Data Source=X.X.X.X,1433;Initial Catalog=ContosoFinanceWebDB;User ID=ContosoFinanceWebDB;Password=demo\@pass123
+```
 
 ## Exercise 3: Deploy Contoso Financial Web Application
 
