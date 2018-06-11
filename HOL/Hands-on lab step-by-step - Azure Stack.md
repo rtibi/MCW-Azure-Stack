@@ -145,13 +145,13 @@ The following screenshot shows the installer executable:
 1.  Change to the **AppServiceHelperScripts** folder by executing the following command in an elevated PowerShell console:
 
     ```
-    CD C:\\HOL\\AppServiceHelperScripts
+    CD C:\HOL\AppServiceHelperScripts
     ```
 
 2.  Create certificates that the Azure App service resource provider will need by running the following command:
 
     ```
-    .\\Create-AppServiceCerts.ps1
+    .\Create-AppServiceCerts.ps1
     ```
 
 When prompted use the following values:
@@ -173,7 +173,7 @@ When prompted use the following values:
   
 3.  Get the Azure Stack Root Certificate by executing the following command:
     ```
-    .\\Get-AzureStackRootCert.ps1
+    .\Get-AzureStackRootCert.ps1
     ```
 
 **When prompted:**
@@ -230,8 +230,11 @@ When prompted use the following values:
 
     net share %WEBSITES\_SHARE%=%WEBSITES\_FOLDER% /grant:Everyone,full
 
+    ```
+
     9.  Next up is to configure access control to the shares. To configure access run the following commands at an elevated command prompt on the file server. Replace values in italics with values that are specific to your environment.
 
+    ```
     set WEBSITES\_FOLDER=C:\\WebSites
 
     icacls %WEBSITES\_FOLDER% /reset
@@ -462,7 +465,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
 10. From this directory, run the script DeploySQLProvider.ps1 by executing the following command.
     ```
-    .\\DeploySQLProvider.ps1
+    .\DeploySQLProvider.ps1
     ```
 
 ![Command screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image59.png "Command")
