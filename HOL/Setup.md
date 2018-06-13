@@ -61,7 +61,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
     ```
     cd C:\AzureStackOnAzureVM
 
-    .\Install-ASDK,.ps1
+    .\Install-ASDK.ps1
     ```
 
 When prompted enter:
@@ -80,7 +80,7 @@ When prompted enter:
 
     -   Password: **\[your Azure Stack password\]**
 
-4.  Once connected open Server Manager. On the left, click **Local Server**.
+4.  Once connected open Server Manager. On the left, click **Local Server**.  NOTE: Wait until installation is complete.
 
 ### Task 3: Install PowerShell for Azure Stack
 
