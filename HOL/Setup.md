@@ -215,9 +215,9 @@ In this task, you will download the following images and artifacts which are nee
 
 -   SQL IaaS Extension
 
--   Windows Server 2016 -- Server Core
+-   Windows Server 2016 -- Server Core Pay for Use
 
--   Windows Server 2016 Data Center
+-   Windows Server 2016 Data Center Pay for Use
 
 1.  From within the Azure Stack Admin portal, click **Marketplace management**.
 
