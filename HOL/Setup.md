@@ -104,6 +104,7 @@ When prompted enter:
 
     5.  Execute the following command to trust the PSGallery repository:
     ```
+    Register-PSRepository -Default
     Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
     ```
 
