@@ -222,7 +222,7 @@ When prompted use the following values:
     ```
     set WEBSITES_SHARE=WebSites
 
-    set WEBSITES_FOLDER=C:\\WebSites
+    set WEBSITES_FOLDER=C:\WebSites
 
     md %WEBSITES_FOLDER%
 
@@ -235,7 +235,7 @@ When prompted use the following values:
     9.  Next up is to configure access control to the shares. To configure access run the following commands at an elevated command prompt on the file server. Replace values in italics with values that are specific to your environment.
 
     ```
-    set WEBSITES_FOLDER=C:\\WebSites
+    set WEBSITES_FOLDER=C:\WebSites
 
     icacls %WEBSITES_FOLDER% /reset
 
