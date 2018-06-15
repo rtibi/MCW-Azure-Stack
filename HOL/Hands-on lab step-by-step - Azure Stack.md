@@ -220,32 +220,32 @@ When prompted use the following values:
 
 8.  Next you need to provision the content share on the file server. Launch an elevated console from within the VM by opening the run dialog and entering **cmd** then pressing **enter**, and then execute the following commands.
     ```
-    set WEBSITES\_SHARE=WebSites
+    set WEBSITES_SHARE=WebSites
 
-    set WEBSITES\_FOLDER=C:\\WebSites
+    set WEBSITES_FOLDER=C:\\WebSites
 
-    md %WEBSITES\_FOLDER%
+    md %WEBSITES_FOLDER%
 
-    net share %WEBSITES\_SHARE% /delete
+    net share %WEBSITES_SHARE% /delete
 
-    net share %WEBSITES\_SHARE%=%WEBSITES\_FOLDER% /grant:Everyone,full
+    net share %WEBSITES_SHARE%=%WEBSITES_FOLDER% /grant:Everyone,full
 
     ```
 
     9.  Next up is to configure access control to the shares. To configure access run the following commands at an elevated command prompt on the file server. Replace values in italics with values that are specific to your environment.
 
     ```
-    set WEBSITES\_FOLDER=C:\\WebSites
+    set WEBSITES_FOLDER=C:\\WebSites
 
-    icacls %WEBSITES\_FOLDER% /reset
+    icacls %WEBSITES_FOLDER% /reset
 
-    icacls %WEBSITES\_FOLDER% /grant FileShareOwner:(OI)(CI)(F)
+    icacls %WEBSITES_FOLDER% /grant FileShareOwner:(OI)(CI)(F)
 
-    icacls %WEBSITES\_FOLDER% /inheritance:r
+    icacls %WEBSITES_FOLDER% /inheritance:r
 
-    icacls %WEBSITES\_FOLDER% /grant FileShareUser:(CI)(S,X,RA)
+    icacls %WEBSITES_FOLDER% /grant FileShareUser:(CI)(S,X,RA)
 
-    icacls %WEBSITES\_FOLDER% /grant \*S-1-1-0:(OI)(CI)(IO)(RA,REA,RD)
+    icacls %WEBSITES_FOLDER% /grant \*S-1-1-0:(OI)(CI)(IO)(RA,REA,RD)
     ```
 
 #### Sub Task 4: Deploying a Supporting SQL Server 
