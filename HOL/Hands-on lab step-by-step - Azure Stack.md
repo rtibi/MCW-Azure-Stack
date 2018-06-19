@@ -245,7 +245,7 @@ When prompted use the following values:
 
     icacls %WEBSITES_FOLDER% /grant FileShareUser:(CI)(S,X,RA)
 
-    icacls %WEBSITES_FOLDER% /grant \*S-1-1-0:(OI)(CI)(IO)(RA,REA,RD)
+    icacls %WEBSITES_FOLDER% /grant *S-1-1-0:(OI)(CI)(IO)(RA,REA,RD)
     ```
 
 #### Sub Task 4: Deploying a Supporting SQL Server 
