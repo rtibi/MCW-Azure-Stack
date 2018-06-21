@@ -1,11 +1,11 @@
 ﻿# HTML Files for Workshop
-[Whiteboard design session student guide - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/WDS/Whiteboard%20design%20session%20student%20guide%20-%20Azure%20Stack.html)
+[WDS student guide - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Whiteboard%20design%20session/WDS%20student%20guide%20-%20Azure%20Stack.html)
 
-[Whiteboard design session trainer guide - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/WDS/Whiteboard%20design%20session%20trainer%20guide%20-%20Azure%20Stack.html)
+[WDS trainer guide - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Whiteboard%20design%20session/WDS%20trainer%20guide%20-%20Azure%20Stack.html)
 
-[Hands-on lab step-by-step - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/HOL/Hands-on%20lab%20step-by-step%20-%20Azure%20Stack.html)
+[Before the lab - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Hands-on%20lab/Before%20the%20lab%20-%20Azure%20Stack.html)
 
-[Hands-on lab unguided - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/HOL/Hands-on%20lab%20unguided%20-%20Azure%20Stack.html)
+[HOL step-by-step - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Hands-on%20lab/HOL%20step-by-step%20-%20Azure%20Stack.html)
 
-[Setup.html](https://cloudworkshop.blob.core.windows.net/azure-stack/HOL/Setup.html)
+[HOL unguided - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Hands-on%20lab/HOL%20unguided%20-%20Azure%20Stack.html)
 
