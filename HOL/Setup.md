@@ -70,7 +70,7 @@ When prompted enter:
 
 -   Enter Azure AD User: Specify your Azure subscription user account
 
--   Select ASK Version **1803** and press **C** to continue
+-   Select ASK Version **1804** and press **C** to continue
 
 2.  It will take up to 6 hours to successfully install the Azure Stack developer kit.
 
