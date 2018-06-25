@@ -1,4 +1,4 @@
-![](images/HeaderPic.png "Microsoft Cloud Workshops")
+﻿![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Azure Stack
@@ -9,7 +9,7 @@ Azure Stack
 </div>
 
 <div class="MCWHeader3">
-May 2018
+June 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -44,20 +44,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 ## Abstract and learning objectives 
 
 This workshop is designed to teach attendees how to design a hybrid cloud architecture using a combination of the Azure public cloud and Azure Stack. This functional architecture will enable customers to leverage their investments in Azure as a "cloud platform," rather than Azure as a "place." Attendees will learn to determine which systems are good candidates for the Azure public cloud and which are better suited on Azure Stack.
-
-After completing workshop, attendees will be better able to recommend and design hybrid cloud systems that leverage one application and deployment model: Azure.
-
-In addition, attendees will learn to:
-
--   Understand when the Azure public cloud versus Azure Stack is appropriate based on customer requirements.
-
--   Describe possible integrations between Azure public cloud solutions and Azure Stack
-
--   Understand the taxonomy of Azure Stack: tenants, regions, subscriptions, offers, plans, services and quotas.
-
--   Describe the resource providers that are available for use with Azure Stack.
-
--   Design and deploy hybrid connectivity between Azure public cloud and Azure Stack.
 
 ## Step 1: Review the customer case study 
 
@@ -170,9 +156,9 @@ Create a network design.
 
 Directions: With all participants at your table: 
 
-1.  Identify any customer needs that are not addressed with the proposed solution. 
-2.  Identify the benefits of your solution. 
-3.  Determine how you will respond to the customer’s objections. 
+1.  Identify any customer needs that are not addressed with the proposed solution 
+2.  Identify the benefits of your solution 
+3.  Determine how you will respond to the customer’s objections 
 
 Prepare a 15-minute chalk-talk style presentation to the customer. 
 
@@ -187,13 +173,13 @@ Time frame: 30 minutes
 **Presentation** 
 
 Directions:
-1.  Pair with another table.
-2.  One table is the Microsoft team and the other table is the customer.
-3.  The Microsoft team presents their proposed solution to the customer.
-4.  The customer makes one of the objections from the list of objections.
-5.  The Microsoft team responds to the objection.
-6.  The customer team gives feedback to the Microsoft team. 
-7.  Tables switch roles and repeat Steps 2–6.
+1.  Pair with another table
+2.  One table is the Microsoft team and the other table is the customer
+3.  The Microsoft team presents their proposed solution to the customer
+4.  The customer makes one of the objections from the list of objections
+5.  The Microsoft team responds to the objection
+6.  The customer team gives feedback to the Microsoft team
+7.  Tables switch roles and repeat Steps 2–6
 
 ##  Wrap-up 
 
