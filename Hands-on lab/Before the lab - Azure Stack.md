@@ -45,8 +45,6 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 9.  On the right side of the pane, click **On** by **IE Enhanced Security Configuration**.
 
-    ![In the Essentials section, IE Enhanced Security Configuration is set to On.](images/Setup/image6.png "Essentials section")
-
 10. Change to **Off** for Administrators and click **OK**.
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
