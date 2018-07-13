@@ -1,9 +1,33 @@
-# Azure Stack setup
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+
+<div class="MCWHeader1">
+Azure Stack
+</div>
+
+<div class="MCWHeader2">
+Before the hands-on lab setup guide
+</div>
+
+<div class="MCWHeader3">
+June 2018
+</div>
+
+
+Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
+
+Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
+
+The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
+
+© 2018 Microsoft Corporation. All rights reserved.
+
+Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.# Azure Stack setup
+
+# Azure Stack before the hands-on lab setup guide 
 
 ## Requirements
 
 -   Microsoft Azure subscription 
-
 
 ## Before the hands-on lab
 
@@ -15,15 +39,15 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 ### Task 1: Create a virtual machine to execute the lab
 
-1.  Launch a browser, and navigate to <https://github.com/opsgility/cw-azure-stack> and click the **Deploy to Azure** button.
+1.  Launch a browser, and navigate to <https://github.com/opsgility/cw-azure-stack> and click the **Deploy to Azure** button
 
-2.  Specify a resource group name **AzureStack** and deploy the template.
+2.  Specify a resource group name **AzureStack** and deploy the template
 
 **NOTE:** Please wait for the virtual machine to be provisioned prior to moving to the next step.
 
-3.  After the VM is provisioned, **connect** to establish a new Remote Desktop Session.
+3.  After the VM is provisioned, **connect** to establish a new Remote Desktop Session
 
-4.  Depending on your Remote Desktop Protocol Client and browser configuration, you will either be prompted to open an RDP file, or you will need to download it and then open it separately to connect.
+4.  Depending on your Remote Desktop Protocol Client and browser configuration, you will either be prompted to open an RDP file, or you will need to download it and then open it separately to connect
 
 5.  Log in with the credentials specified during creation:
 
@@ -35,7 +59,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
     ![Screenshot of the Remote Desktop Connection warning dialog box.](images/Setup/image3.png "Remote Desktop Connection dialog box")
 
-7.  When logging on for the first time, you will see a prompt on the right asking about network discovery. Click **No**.
+7.  When logging on for the first time, you will see a prompt on the right asking about network discovery. Click **No**
 
     ![Screenshot of the Network discovery prompt, with the No button selected.](images/Setup/image4.png "Network discovery prompt")
 
@@ -43,9 +67,9 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 ![Local Server is selected in the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
 
-9.  On the right side of the pane, click **On** by **IE Enhanced Security Configuration**.
+9.  On the right side of the pane, click **On** by **IE Enhanced Security Configuration**
 
-10. Change to **Off** for Administrators and click **OK**.
+10. Change to **Off** for Administrators and click **OK**
 
     ![In the Internet Explorer Enhanced Security Configuration dialog box, Administrators is set to Off.](images/Setup/image7.png "Internet Explorer Enhanced Security Configuration dialog box")
 
@@ -70,7 +94,7 @@ When prompted enter:
 
 -   Select ASK Version **1804** and press **C** to continue
 
-2.  It will take up to 6 hours to successfully install the Azure Stack developer kit.
+2.  It will take up to 6 hours to successfully install the Azure Stack developer kit
 
 3.  After the installation reboots the virtual machine, login to the AzSHost-1 virtual machine using RDP to monitor the installation progress. You will need to use the account:
 
@@ -78,7 +102,9 @@ When prompted enter:
 
     -   Password: **\[your Azure Stack password\]**
 
-4.  Once connected open Server Manager. On the left, click **Local Server**.  NOTE: Wait until installation is complete.
+4.  Once connected open Server Manager. On the left, click **Local Server**.  
+
+**NOTE:** Wait until installation is complete.
 
 ### Task 3: Install PowerShell for Azure Stack
 
@@ -92,15 +118,15 @@ When prompted enter:
 
     ![The Windows PowerShell ISE right-click sub-menus display.](images/Setup/image9.png "Windows PowerShell ISE sub-menus")
 
-3.  Click **Yes** when prompted.
+3.  Click **Yes** when prompted
 
     ![User Account Control is set to Yes.](images/Setup/image10.png "User Account Control")
 
-4.  On the PowerShell ISE window, open the script pane by clicking the **\>** mark next to the word **Script.**
+4.  On the PowerShell ISE window, open the script pane by clicking the **\>** mark next to the word **Script**
 
     ![Screenshot of the PowerShell Administrators window with the Script down arrow called out.](images/Setup/image11.png "PowerShell Administrators window")
 
-    5.  Execute the following command to trust the PSGallery repository:
+5.  Execute the following command to trust the PSGallery repository:
     ```
     Register-PSRepository -Default
     Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
@@ -184,7 +210,7 @@ In this task, execute all the commands from an elevated PowerShell console on th
     Register-AzureRmResourceProvider -ProviderNamespace Microsoft.AzureStack
     ```
 
-6.  Next, execute the following commands to register your Azure Stack installation. When prompted, login with the **azurestack.local\\azurestackadmin** account.
+6.  Next, execute the following commands to register your Azure Stack installation. When prompted, login with the **azurestack.local\\azurestackadmin** account
     ```
     Import-Module .\RegisterWithAzure.psm1
 
@@ -217,29 +243,29 @@ In this task, you will download the following images and artifacts which are nee
 
 -   Windows Server 2016 Data Center Pay for Use
 
-1.  From within the Azure Stack Admin portal, click **Marketplace management**.
+1.  From within the Azure Stack Admin portal, click **Marketplace management**
 
     ![Marketplace management is selected in the Azure Stack Admin portal.](images/Setup/image13.png "Azure Stack Admin portal")
 
-2.  You should see the following message: **You have no items downloaded to your Azure Stack marketplace yet. Click "Add from Azure" to add items.**
+2.  You should see the following message: **You have no items downloaded to your Azure Stack marketplace yet.** Click **"Add from Azure"** to add items.
 
     ![In the Marketplace management section, an arrow points to the message.](images/Setup/image14.png "Marketplace management section")
 
-3.  Click **+Add** from Azure and if you see the Marketplace Items, you have registered successfully.
+3.  Click **+Add** from Azure and if you see the Marketplace Items, you have registered successfully
 
     ![Under Marketplace management, the Add from Azure button is called out.](images/Setup/image15.png "Marketplace management section")
 
     ![Marketplace items display in the Marketplace management section.](images/Setup/image16.png "Add from Azure section")
 
-4.  From the Marketplace management area of the Azure Stack Admin portal, select the **Developer edition of SQL Server 2017 on Windows Server 2016**.
+4.  From the Marketplace management area of the Azure Stack Admin portal, select the **Developer edition of SQL Server 2017 on Windows Server 2016**
 
     ![Screenshot of the Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 option.](images/Setup/image17.png "Free SQL Server License option")
 
-5.  Click **Download**.
+5.  Click **Download**
 
     ![The Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016 page displays with the Download button selected.](images/Setup/image18.png "Free SQL Server License Download page")
 
-6.  A notification will pop-up notifying you the product is being downloaded to Azure Stack.
+6.  A notification will pop-up notifying you the product is being downloaded to Azure Stack
 
     ![Screenshot of the Downloading product notification.](images/Setup/image19.png "Downloading notification")
 
@@ -247,15 +273,15 @@ In this task, you will download the following images and artifacts which are nee
 
     ![In the Add from Azure section, SQL IaaS is in the search field, and in the results, SQL IaaS Extension is selected.](images/Setup/image20.png "Add from Azure section")
 
-8.  When the SQL IaaS Extension appears, click **Download**.
+8.  When the SQL IaaS Extension appears, click **Download**
 
     ![The Download button is selected on the SQL IaaS Extension page.](images/Setup/image21.png "SQL IaaS Extension page")
 
-9.  A notification will pop-up notifying you the product is being downloaded to Azure Stack.
+9.  A notification will pop-up notifying you the product is being downloaded to Azure Stack
 
     ![Screenshot of the Downloading product notification.](images/Setup/image22.png "Downloading product notification")
 
-10. In the Add from Azure search bar, type **Windows Server**, and press **enter**.
+10. In the Add from Azure search bar, type **Windows Server**, and press **enter**
 
 -   Download **both** of the following images:
 
@@ -263,7 +289,7 @@ In this task, you will download the following images and artifacts which are nee
 
     -   Windows Server 2016 Datacenter - Server Core
 
-8.  Once the products are downloaded, you will receive a notification.
+8.  Once the products are downloaded, you will receive a notification
 
     ![Screenshot of the Downloading product finished notification.](images/Setup/image23.png "Downloading product finished notification")
 
