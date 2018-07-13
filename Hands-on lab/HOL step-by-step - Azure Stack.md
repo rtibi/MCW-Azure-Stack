@@ -77,7 +77,7 @@ In this hands-on lab, you will deploy the Azure Stack Development Kit and deploy
 
 ![The Microsoft Azure Stack is made up of Mortgage Applications and Mortgage Admin databases, Offerings API, Storage Queue Mortgage Applications, Mortgage Applications, and SQL Web App DB and Customer Data.](images/Hands-onlabstep-by-step-AzureStackimages/media/image2.png "Microsoft Azure Stack")
 
-## Help References
+## Help references
 |    |            |
 |----------|:-------------:|
 | **Description** | **Links** |
