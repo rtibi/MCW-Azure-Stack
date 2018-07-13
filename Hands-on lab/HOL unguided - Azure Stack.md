@@ -17,6 +17,7 @@ Information in this document, including URL and other Internet Web site referenc
 Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
+
 © 2018 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
@@ -134,15 +135,15 @@ In this exercise, you will configure the Azure Stack environment for the lab. Yo
 
 #### Tasks to complete
 
--   Deploy a Windows Server File Server in Azure Stack using the Azure QuickStart template **appservice-fileservice-standalone**.
+-   Deploy a Windows Server File Server in Azure Stack using the Azure QuickStart template **appservice-fileservice-standalone**
 
--   Deploy a SQL Server in Azure Stack using the SQL Server image deployed in the Before the hands-on lab section.
+-   Deploy a SQL Server in Azure Stack using the SQL Server image deployed in the Before the hands-on lab section
 
--   Follow the steps in the following documentation <https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-app-service-deploy> to install the Azure App Service Resource provider.
+-   Follow the steps in the following documentation <https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-app-service-deploy> to install the Azure App Service Resource provider
 
 #### Exit criteria
 
--   The Azure App Service resource provider should be installed. You should be able to create a new Azure Web App from your Azure Stack deployment.
+-   The Azure App Service resource provider should be installed. You should be able to create a new Azure Web App from your Azure Stack deployment
 
 ### Task 2: Deploy the Azure Stack SQL DB Resource Provider
 
@@ -152,7 +153,7 @@ In this exercise, you will configure the Azure Stack environment for the lab. Yo
 
 #### Exit criteria
 
--   In the Azure Stack admin portal, SQL Database and SQL HostingServer should now appear as options beneath the Data + Storage section when creating a new resource.
+-   In the Azure Stack admin portal, SQL Database and SQL HostingServer should now appear as options beneath the Data + Storage section when creating a new resource
 
 ### Task 3: Create Azure Stack Deployment Taxonomy for Tenets
 
@@ -180,15 +181,15 @@ In this exercise, you will configure the Azure Stack environment for the lab. Yo
 
     -   Maximum number of databases: **20**
 
--   Create a new offer from the plan and set the offer to be publicly visible.
+-   Create a new offer from the plan and set the offer to be publicly visible
 
--   Login to the tenant portal and create a new Azure Stack subscription using the new offer.
+-   Login to the tenant portal and create a new Azure Stack subscription using the new offer
 
 #### Exit criteria
 
--   You should have a new plan and offer with the custom Azure SQL Database quota.
+-   You should have a new plan and offer with the custom Azure SQL Database quota
 
--   You should be able to login to the tenant portal and create a resource using the new subscription.
+-   You should be able to login to the tenant portal and create a resource using the new subscription
 
 ## Exercise 2: Deploy the SQL Hosting Server and DB on Azure Stack
 
@@ -204,17 +205,17 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 #### Exit criteria
 
--   You should have a new SQL Hosting Server resource provisioned in the Azure Stack Admin portal.
+-   You should have a new SQL Hosting Server resource provisioned in the Azure Stack Admin portal
 
 ### Task 2: Register resource providers in the tenant subscription
 
 #### Tasks to complete
 
--   In the Azure Stack Tenant portal, navigate to Subscriptions -\> Resource Providers and register all resource providers not currently registered.
+-   In the Azure Stack Tenant portal, navigate to Subscriptions -\> Resource Providers and register all resource providers not currently registered
 
 #### Exit criteria
 
--   All of your resource providers should show registered.
+-   All of your resource providers should show registered
 
 ### Task 3: Deploy SQL DB on Azure Stack 
 
@@ -230,11 +231,11 @@ The first step to getting the website up and running is to configure the SQL Dat
 
     -   Location: **Local**
 
--   Copy the connection string for later reference.
+-   Copy the connection string for later reference
 
 #### Exit criteria
 
--   A deployed SQL Database in the Azure Stack Tenant portal and a copy to the connection string.
+-   A deployed SQL Database in the Azure Stack Tenant portal and a copy to the connection string
 
 ## Exercise 3: Deploy Contoso Financial Web Application
 
@@ -254,7 +255,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 #### Exit criteria
 
--   A functioning web app deployed in the Azure Stack Tenant portal.
+-   A functioning web app deployed in the Azure Stack Tenant portal
 
 ### Task 2: Provision an Azure Storage Account
 
@@ -268,7 +269,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 #### Exit criteria
 
--   A storage account deployed in the Azure Stack Tenant Portal.
+-   A storage account deployed in the Azure Stack Tenant Portal
 
 ### Task 3: Update the configuration strings
 
@@ -290,7 +291,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 #### Exit criteria
 
--   The application settings for the web app should be configured to reference the newly created storage account and Azure SQL Database.
+-   The application settings for the web app should be configured to reference the newly created storage account and Azure SQL Database
 
 ### Task 4: Publish the Contoso Financial Web Application
 
@@ -316,13 +317,13 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 -   Create a new Azure API App using the same resource group as the web app
 
--   Configure Cross-Origin Resource Sharing (CORS) on the new app to use **ALLOWED ORIGINS** **\**
+-   Configure Cross-Origin Resource Sharing (CORS) on the new app to use **ALLOWED ORIGINS**
 
 #### Exit criteria
 
--   The new API app should be deployed in the same resource group as the web app.
+-   The new API app should be deployed in the same resource group as the web app
 
--   CORS should configured to allow all origins for the API app.
+-   CORS should configured to allow all origins for the API app
 
 ### Task 2: Deploy the Contoso.Apps.Financial.Offers project
 
@@ -332,7 +333,7 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 #### Exit criteria
 
--   The API app should be populated with the code from the GitHub repository.
+-   The API app should be populated with the code from the GitHub repository
 
 ### Task 3: Update the Configuration Settings with the API URL
 
@@ -342,11 +343,13 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
     -   Key: offersAPIUrl
 
-    -   Value: enter the HTTPS URL for the Offers API App with /api/get appended to the end. Example: https://contosofinanceapi.azurewebsites.net/api/get
+    -   Value: enter the HTTPS URL for the Offers API App with /api/get appended to the end
+    
+    Example: https://contosofinanceapi.azurewebsites.net/api/get
 
 #### Exit criteria
 
--   The web app should now show special offers when loaded from the home page.
+-   The web app should now show special offers when loaded from the home page
 
 ## Exercise 5: Automating backend processes with Azure functions 
 
@@ -358,9 +361,9 @@ Contoso wants to automate the process of generating applications in PDF format a
 
 #### Tasks to complete
 
--   Create a new Azure Function in the Azure Stack Tenant portal using the same resource group as the web app.
+-   Create a new Azure Function in the Azure Stack Tenant portal using the same resource group as the web app
 
--   Deploy the code from the following repository: <https://github.com/opsgility/contosofinancefunction>.
+-   Deploy the code from the following repository: <https://github.com/opsgility/contosofinancefunction>
 
 -   Scroll down to the **Application settings** and click **+Add new setting** to add a storage connection. This storage account will be used to write the PDFs to blob storage.
 
@@ -378,7 +381,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
 #### Exit criteria
 
--   The function code should be deployed and configured to connect to the Azure SQL Database and the Storage Account for the Contoso Web App.
+-   The function code should be deployed and configured to connect to the Azure SQL Database and the Storage Account for the Contoso Web App
 
 ## Exercise 6: Deploy Contoso Finance Admin website
 
@@ -390,9 +393,9 @@ In this exercise, you will provision the admin website to be used by employees t
 
 #### Tasks to complete
 
--   Create a new web app in the Azure Stack tenant portal that will be used for the admin web app.
+-   Create a new web app in the Azure Stack tenant portal that will be used for the admin web app
 
--   Add a new connection string so it can connect to the Azure SQL Database for the web app.
+-   Add a new connection string so it can connect to the Azure SQL Database for the web app
 
     -   Name: **ContosoFinance**
 
@@ -402,17 +405,17 @@ In this exercise, you will provision the admin website to be used by employees t
 
 #### Exit criteria
 
--   The web app should be deployed with the connection string configured correctly in application settings.
+-   The web app should be deployed with the connection string configured correctly in application settings
 
 ### Task 2: Deploy the call center admin Web App from Visual Studio
 
 #### Tasks to complete
 
--   Deploy the web app from the following GitHub repository: <https://github.com/opsgility/contosofinanceadmint> to the newly deployed web app.
+-   Deploy the web app from the following GitHub repository: <https://github.com/opsgility/contosofinanceadmint> to the newly deployed web app
 
 #### Exit criteria
 
--   The web app should load, and any orders that are submitted through the web app should show in the admin portal with the ability to download the PDF.
+-   The web app should load, and any orders that are submitted through the web app should show in the admin portal with the ability to download the PDF
 
 ## After the hands-on lab 
 
@@ -421,3 +424,5 @@ Duration: 10 minutes
 1.  If provisioned using the Azure Stack Developer Kit in an Azure VM, delete the resource group your Azure Stack Host VM is running in.
 
 2.  If running on your own Developer Kit, delete all resource groups from the Azure Stack portal that you created during the execution of this lab.
+
+You should follow all steps provided *before* performing the Hands-on lab.
