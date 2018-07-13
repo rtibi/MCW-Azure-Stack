@@ -170,7 +170,9 @@ This workshop is designed to teach attendees how to design a hybrid cloud archit
 **Outcome** 
 
 Analyze your customer’s needs.
-Time frame: 15 minutes 
+
+Timeframe: 15 minutes 
+
 Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
 1.  Meet your table participants and trainer 
 2.  Read all of the directions for steps 1–3 in the student guide
@@ -196,23 +198,23 @@ With the goals in mind, Contoso has challenged FT to help use their mortgage app
 
 Contoso is looking for FT to provide the following for their expansion into North America:
 
-1.  Design a hybrid-cloud architecture that is native Azure end-to-end without the need for hosting the application in a Contoso owned datacenter.
+1.  Design a hybrid-cloud architecture that is native Azure end-to-end without the need for hosting the application in a Contoso owned datacenter
 
-2.  The design should ensure that customer data is not stored in the Azure Cloud while also allowing future applications to be easily deployed in Azure with access to custom data regardless of where they are deployed.
+2.  The design should ensure that customer data is not stored in the Azure Cloud while also allowing future applications to be easily deployed in Azure with access to custom data regardless of where they are deployed
 
-3.  Deploy the application in a secure manner as to allow for the frontend applications to access the backend customer data.
+3.  Deploy the application in a secure manner as to allow for the frontend applications to access the backend customer data
 
-4.  Establish direct connectivity from the new regional headquarters in Dallas to the deployments. This will allow communication with existing systems and reporting until the rest of Contoso's services are moved to Azure in the future.
+4.  Establish direct connectivity from the new regional headquarters in Dallas to the deployments. This will allow communication with existing systems and reporting until the rest of Contoso's services are moved to Azure in the future
 
-5.  Allow for a consistent application deployment model using Azure ARM templates and CI/CD.
+5.  Allow for a consistent application deployment model using Azure ARM templates and CI/CD
 
-6.  Detail the taxonomy that will be leveraged for the hybrid-cloud including the Resource Providers (RP) This includes tenants, regions, subscriptions, offers, plans, services and quota.
+6.  Detail the taxonomy that will be leveraged for the hybrid-cloud including the Resource Providers (RP) This includes tenants, regions, subscriptions, offers, plans, services and quota
 
 ### Customer objections 
 
-1.  The Mortgage SQL DB cannot be hosted in the public cloud.
+1.  The Mortgage SQL DB cannot be hosted in the public cloud
 
-2.  Contoso staff is already stretched thin, so minimizing patching of systems and day-to-day management is very important.
+2.  Contoso staff is already stretched thin, so minimizing patching of systems and day-to-day management is very important
 
 3.  The developer team acknowledges that the existing application architecture is designed for running on Windows Virtual Machines, but PaaS is the future they envision. How can they move this application forward?
 
@@ -225,9 +227,10 @@ Contoso is looking for FT to provide the following for their expansion into Nort
 ## Step 2: Design a proof of concept solution
 
 **Outcome** 
+
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
 
-Time frame: 60 minutes
+Timeframe: 60 minutes
 
 **Business needs**
 
@@ -236,6 +239,7 @@ Directions: With all participants at your table, answer the following questions 
 2.  What customer business needs do you need to address with your solution?
 
 **Design** 
+
 Directions: With all participants at your table, respond to the following questions on a flip chart.
 
 Design a hybrid-cloud architecture using Azure services that will make up the implementation for Contoso.
@@ -288,7 +292,7 @@ Prepare a 15-minute chalk-talk style presentation to the customer.
  
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
-Time frame: 30 minutes
+Timeframe: 30 minutes
 
 **Presentation** 
 
@@ -303,7 +307,7 @@ Directions:
 
 ## Wrap-up 
 
-Time frame: 15 minutes
+Timeframe: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
@@ -356,23 +360,19 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 -   Determine which table will be paired with your table before Step 3 begins
 
--   For the first round, assign one table as the Microsoft team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer
 
--   Have the Microsoft team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team
 
-    -   Have the customer team provide one objection for the Microsoft team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to
 
-    -   The presentation and objections should be no longer than 10 minutes
-
--   Have participants on the customer team give feedback to the Microsoft team
-
-    -   The feedback should be no longer than 5 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes
 
     -   If needed, the trainer may also provide feedback
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear a SME share the following preferred solution.
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
 
 ##  Preferred target audience
 
@@ -396,7 +396,7 @@ After being engaged by Contoso and gathering the requirements from the client, F
 
 Design a hybrid-cloud architecture using Azure services that will make up the implementation for Contoso:
 
--   Identify the overall application design you would propose for modernizing their existing application into Azure.
+-   Identify the overall application design you would propose for modernizing their existing application into Azure
 
     -   Azure Web Apps and API Apps will replace the IIS servers for hosting the website and associated APIs
 
@@ -408,7 +408,7 @@ Design a hybrid-cloud architecture using Azure services that will make up the im
 
     -   Azure SQL Database will replace the existing SQL Servers
 
-    -   Azure Traffic Manager will be configured in Priority mode to route web traffic to either the Azure public Web App or the Web App on Azure Stack.
+    -   Azure Traffic Manager will be configured in Priority mode to route web traffic to either the Azure public Web App or the Web App on Azure Stack
 
     -   Azure Content Deployment Network (CDN) to allow public files such as PDFs to be routed closer to customers for a faster download experience
 
@@ -440,13 +440,13 @@ Azure Resource Manager templates can be used to deploy supported services to bot
 
 A hybrid continuous integration/continuous delivery(CI/CD) pipeline enables you to build, test, and deploy your app to multiple clouds. A hybrid CI/CD pipeline can help you:
 
--   Initiate a new build based on code commits to your Visual Studio Team Services (VSTS) repository.
+-   Initiate a new build based on code commits to your Visual Studio Team Services (VSTS) repository
 
--   Automatically deploy your newly built code to Azure for user acceptance testing.
+-   Automatically deploy your newly built code to Azure for user acceptance testing
 
--   Once your code has passed testing, automatically deploy to Azure Stack.
+-   Once your code has passed testing, automatically deploy to Azure Stack
 
-Plan and Document Azure Stack Taxonomy for this deployment
+Plan and Document Azure Stack Taxonomy for this deployment.
 
 -   Cloud operator: FT will act as in this role as the Service Provider. FT will create and maintain the Azure Stack Infrastructure. This will include building out the hardware, software, and plans, offers and services of the taxonomy. Only FT will be able to access the Administrator Portal for the Azure Stack private cloud. Contoso will have access to use the service via the User Portal to build, manage and secure their deployments.
 
@@ -472,13 +472,13 @@ Design Network connectivity between the Contoso Regional HQ in Dallas to Azure a
 
 ## Checklist of preferred objection handling
 
-1.  The Mortgage SQL DB cannot be hosted in the public cloud.
+1.  The Mortgage SQL DB cannot be hosted in the public cloud
 
     **Potential Answer:**
 
     The SQL Database containing the customer information will be hosted in Azure Stack in the FT datacenter. This will require the SQL DB Resource Provider to be running on Azure Stack. The data will never reside in the Azure Global Cloud.
 
-2.  Contoso will have a very limited staff to manage the US based operations, so minimizing patching of systems and day-to-day management is very important.
+2.  Contoso will have a very limited staff to manage the US based operations, so minimizing patching of systems and day-to-day management is very important
 
     **Potential Answer:**
 
