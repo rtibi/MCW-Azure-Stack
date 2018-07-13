@@ -18,15 +18,15 @@ After completing workshop, attendees will be better able to recommend and design
 
 In addition, attendees will learn to:
 
--   Understand when the Azure public cloud versus Azure Stack is appropriate based on customer requirements.
+-   Understand when the Azure public cloud versus Azure Stack is appropriate based on customer requirements
 
 -   Describe possible integrations between Azure public cloud solutions and Azure Stack
 
--   Understand the taxonomy of Azure Stack: tenants, regions, subscriptions, offers, plans, services and quotas.
+-   Understand the taxonomy of Azure Stack: tenants, regions, subscriptions, offers, plans, services and quotas
 
--   Describe the resource providers that are available for use with Azure Stack.
+-   Describe the resource providers that are available for use with Azure Stack
 
--   Design and deploy hybrid connectivity between Azure public cloud and Azure Stack.
+-   Design and deploy hybrid connectivity between Azure public cloud and Azure Stack
 
 ### Whiteboard Design Session
 
