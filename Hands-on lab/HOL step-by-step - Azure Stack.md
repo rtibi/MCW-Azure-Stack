@@ -1,4 +1,4 @@
-﻿![](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Azure Stack
@@ -28,7 +28,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Abstract and learning objectives](#abstract-and-learning-objectives)
     - [Overview](#overview)
     - [Solution architecture](#solution-architecture)
-    - [Help References](#help-references)
+    - [Help references](#help-references)
     - [Requirements](#requirements)
     - [Exercise 1: Configure Azure Stack](#exercise-1-configure-azure-stack)
         - [Task 1: Deploy the Azure Stack App Service Resource Provider](#task-1-deploy-the-azure-stack-app-service-resource-provider)
@@ -109,9 +109,9 @@ Duration: 2-3 hours
 
 In this exercise, you will configure the Azure Stack environment for the lab. You will install the resource providers for Azure SQL Database and Azure App Service, from there you will configure the taxonomy for the Azure Stack hands-on lab.
 
-Tip: To minimize prompts from PowerShell, set your execution policy to bypass
+Tip: To minimize prompts from PowerShell, set your execution policy to bypass.
 
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser.
 
 ### Task 1: Deploy the Azure Stack App Service Resource Provider
 
@@ -173,15 +173,15 @@ When prompted use the following values:
 
 **Note:** Azure App Service requires the use of a file server. You will use an ARM template to create a standalone file server for App Service.
 
-1.  Launch the Azure Stack Administration portal if it isn't open.
+1.  Launch the Azure Stack Administration portal if it isn't open
 
 2.  Deploy the template to the Azure Stack portal by clicking New and search for **Template Deployment**, click the result and then click the **Create button**. Within the new template deployment blade click **Edit Template**.
 
-3.  Within the Edit Template blade, click **Quickstart template**, and then in the dropdown list choose **appservice-fileservice-standalone**, click **OK** and then **Save**.
+3.  Within the Edit Template blade, click **Quickstart template**, and then in the dropdown list choose **appservice-fileservice-standalone**, click **OK** and then **Save**
 
     ![Screenshot of the Edit template blade with the previouslyly mentioned selections.](images/Hands-onlabstep-by-step-AzureStackimages/media/image26.png "Edit template blade")
 
-4.  Specify **demo\@pass123** for the three password parameters.
+4.  Specify **demo\@pass123** for the three password parameters
 
     ![In the Azure Stack - Administration window, under Custom deployment, Edit parameters is selected. Under Parameters, the parameters display.](images/Hands-onlabstep-by-step-AzureStackimages/media/image27.png "Azure Stack - Administration window")
 
@@ -203,7 +203,7 @@ When prompted use the following values:
 
         ![Connect button screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image30.png "Connect button")
 
-8.  Next you need to provision the content share on the file server. Launch an elevated console from within the VM by opening the run dialog and entering **cmd** then pressing **enter**, and then execute the following commands.
+8.  Next you need to provision the content share on the file server. Launch an elevated console from within the VM by opening the run dialog and entering **cmd** then pressing **enter**, and then execute the following commands:
     ```
     set WEBSITES_SHARE=WebSites
 
@@ -217,7 +217,7 @@ When prompted use the following values:
 
     ```
 
-    9.  Next up is to configure access control to the shares. To configure access run the following commands at an elevated command prompt on the file server. Replace values in italics with values that are specific to your environment.
+9.  Next up is to configure access control to the shares. To configure access run the following commands at an elevated command prompt on the file server. Replace values in italics with values that are specific to your environment.
 
     ```
     set WEBSITES_FOLDER=C:\WebSites
@@ -235,7 +235,7 @@ When prompted use the following values:
 
 #### Sub Task 4: Deploying a Supporting SQL Server 
 
-1.  From the Azure Stack Admin Portal, click **+ New, Compute, Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016**, and then click **Create**.
+1.  From the Azure Stack Admin Portal, click **+ New, Compute, Free SQL Server License: SQL Server 2017 Developer on Windows Server 2016**, and then click **Create**
 
     ![The previously mention selections are selected in the Azure Stack Admin Portal.](images/Hands-onlabstep-by-step-AzureStackimages/media/image31.png "Azure Stack Admin Portal")
 
@@ -251,7 +251,7 @@ When prompted use the following values:
 
     ![In the Create virtual machine blade, Basics is selected. In the Basics blade, the previously mentioned fields are set.](images/Hands-onlabstep-by-step-AzureStackimages/media/image32.png "Create virtual machine and Basics blades")
 
-3.  Find and select A3 Standard as the virtual machine size and click **Select.**
+3.  Find and select A3 Standard as the virtual machine size and click **Select**
 
     -   ![A3 Standard is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image33.png "A3 Standard virtual mchine size")
 
@@ -263,9 +263,9 @@ When prompted use the following values:
 
     ![The Static radio button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image35.png "Static radio button")
 
-6.  Click **OK** on the settings blade to continue.
+6.  Click **OK** on the settings blade to continue
 
-7.  On the **SQL Server settings** blade make the following changes and then click **OK.**
+7.  On the **SQL Server settings** blade make the following changes and then click **OK**
 
 -   SQL connectivity: Public (Internet)
 
@@ -273,9 +273,9 @@ When prompted use the following values:
 
     ![In the SQL Server settings blade, the previously mentioned settings are selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image36.png "SQL Server settings blade")
 
-8.  Click **OK** on the summary blade to create the VM (this VM may take 10-15 minutes to provision).
+8.  Click **OK** on the summary blade to create the VM (this VM may take 10-15 minutes to provision)
 
-9.  Note the Public IP address of the VM for later reference.
+9.  Note the Public IP address of the VM for later reference
 
 #### Sub Task 5: Setup Application Identity
 
@@ -303,35 +303,35 @@ When prompted specify the following:
 
 -   Login with your Azure credentials when prompted
 
-3.  Note the application ID created (yours will be different).
+3.  Note the application ID created (yours will be different)
 
     ![Screenshot of the Application ID.](images/Hands-onlabstep-by-step-AzureStackimages/media/image37.png "Application ID")
 
-4.  Switch the Azure Portal (<https://portal.azure.com>) and click Azure Active Directory on the navigation or under All Services.
+4.  Switch the Azure Portal (<https://portal.azure.com>) and click Azure Active Directory on the navigation or under All Services
 
-5.  Select **App Registrations**, and change the drop down to All apps, then search for the application ID noted earlier.
+5.  Select **App Registrations**, and change the drop down to All apps, then search for the application ID noted earlier
 
     ![Search fields are set to the application ID and All apps. ](images/Hands-onlabstep-by-step-AzureStackimages/media/image38.png "Search fields")
 
-6.  Select the **App Service** returned from search results and then click **Settings -\> Required Permissions.**
+6.  Select the **App Service** returned from search results and then click **Settings -\> Required Permissions**
 
     ![Screenshot of the App Service and Settings blades.](images/Hands-onlabstep-by-step-AzureStackimages/media/image39.png "App Service and Settings blades")
 
-7.  Select **Grant Permissions** and click **Yes**.
+7.  Select **Grant Permissions** and click **Yes**
 
 #### Sub Task 6: Install the App Service Resource Provider
 
-1.  Next start the Azure Stack App Service resource provider deployment by navigating to C:\\HOL folder using File Explorer, and double click the **AppService.msi** file to start the installation.
+1.  Next start the Azure Stack App Service resource provider deployment by navigating to C:\\HOL folder using File Explorer, and double click the **AppService.msi** file to start the installation
 
-2.  Click **Deploy App Service or upgrade to the latest version**.
+2.  Click **Deploy App Service or upgrade to the latest version**
 
     ![In the Microsoft Azure App Service 1.1 window, the Deploy App Service or upgrade to the latest version radio button is called out.](images/Hands-onlabstep-by-step-AzureStackimages/media/image40.png "App Service window")
 
-3.  Review and accept the Microsoft Software License Terms and then click **Next**.
+3.  Review and accept the Microsoft Software License Terms and then click **Next**
 
-4.  Review and accept the third-party license terms and then click **Next**.
+4.  Review and accept the third-party license terms and then click **Next**
 
-5.  Review the settings and click **Next**.
+5.  Review the settings and click **Next**
 
     ![In the Microsoft Azure App Service window, App Service Installer fields display.](images/Hands-onlabstep-by-step-AzureStackimages/media/image41.png "Microsoft Azure App Service window")
 
@@ -339,7 +339,7 @@ When prompted specify the following:
 
     ![Fields in the Microsoft Azure App Service 1.1 window display Azure App Service information.](images/Hands-onlabstep-by-step-AzureStackimages/media/image42.png "Microsoft Azure App Service 1.1 window")
 
-7.  Accept the defaults on the network configuration by clicking next.
+7.  Accept the defaults on the network configuration by clicking next
 
     ![Microsoft Azure App Service 1.1 network configuration fields display.](images/Hands-onlabstep-by-step-AzureStackimages/media/image43.png "Microsoft Azure App Service 1.1 window")
 
@@ -379,19 +379,19 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png "Microsoft Azure App Service 1.1 window")
 
-11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**.
+11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**
 
     ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image47.png "Microsoft Azure App Service 1.1 window")
 
-12. Accept the defaults for the VMs to provision for the App Service resource provider by clicking **Next**.
+12. Accept the defaults for the VMs to provision for the App Service resource provider by clicking **Next**
 
     ![The Microsoft Azure App Service 1.1 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image48.png "Microsoft Azure App Service 1.1 window")
 
-13. Except the default for the platform image by clicking **Next**.
+13. Except the default for the platform image by clicking **Next**
 
     ![The default platform image displays in the Microsoft Azure App Service 1.1 window.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png "Microsoft Azure App Service 1.1 window")
 
-14. Specify the following user account for both administrator accounts and click Next.
+14. Specify the following user account for both administrator accounts and click Next
 
 -   User name: appserviceadmin
 
@@ -399,19 +399,19 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image50.png "Microsoft Azure App Service 1.1 window")
 
-15. Click the Checkbox next to Select and click next to start the deployment and then click **Next**.
+15. Click the Checkbox next to Select and click next to start the deployment and then click **Next**
 
     ![The Microsoft Azure App Service 1.1 window displays with a summary of settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image51.png "Microsoft Azure App Service 1.1 window")
 
 16. The final step is to validate the App Service on Azure Stack installation. TO validate the App Service installation perform the following 2 steps:
 
-    -   In the Azure Stack admin portal, go to **Administration - App Service**.
+    -   In the Azure Stack admin portal, go to **Administration - App Service**
 
-    -   In the overview under status, check to see that the **Status** shows **All roles are ready**.
+    -   In the overview under status, check to see that the **Status** shows **All roles are ready**
 
 ### Task 2: Deploy the Azure Stack SQL DB Resource Provider
 
-1.  From the Azure Stack Host, you will need to locate the IP address of the Azure Stack "Privileged Endpoint." Click **Start**, **Windows Administrative Tools** followed by **Hyper-V Manager**.
+1.  From the Azure Stack Host, you will need to locate the IP address of the Azure Stack "Privileged Endpoint." Click **Start**, **Windows Administrative Tools** followed by **Hyper-V Manager**
 
     ![The Azure Stack Host menu displays with Hyper-V Manager selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image52.png "Azure Stack Host menu")
 
@@ -423,11 +423,10 @@ When prompted specify the following:
 
     ![In the AzS-ERCS01 pane, the IP Address is called out, and the Networking tab is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image54.png "AzS-ERCS01 pane")
 
-4.  From the Azure Stack Host, open a new Internet Explorer tab and connect to the follow address.
-
+4.  From the Azure Stack Host, open a new Internet Explorer tab and connect to the following address:
 https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-provider-deploy
 
-5.  From this webpage, download the version of the SQL Resource Provider that matches your version of Azure Stack.
+5.  From this webpage, download the version of the SQL Resource Provider that matches your version of Azure Stack
 
     ![The SQL Resource Provider version link is selected in the Azure Stack build section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image55.png "Azure Stack build section")
 
@@ -437,7 +436,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![The Open File - Security Warning box displays with the Run button selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image57.png "Open File - Security Warning box")
 
-7.  Click **Accept** and use the **Browse** and **Make New Folder** buttons to change the destination folder to a new folder named: **C:\\HOL\\AzureStackSQLRP.** Click **Extract**.
+7.  Click **Accept** and use the **Browse** and **Make New Folder** buttons to change the destination folder to a new folder named: **C:\\HOL\\AzureStackSQLRP.** Click **Extract**
 
     ![The WinRAR self-extracting archive page displays with a callout pointing to the Destination folder field, and the Browse and Extract buttons selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image58.png "WinRAR self-extracting archive page")
 
@@ -459,13 +458,13 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![Screenshot of the Priviledged Endpoint field with the IP address displaying.](images/Hands-onlabstep-by-step-AzureStackimages/media/image60.png "Priviledged Endpoint field")
 
-Note: The popup may appear the PowerShell ISE
+**Note**: The popup may appear the PowerShell ISE.
 
 12. Next, you will be prompted for the **Azure Stack Cloud Admin** credential. Enter the following user name along with your password:
 
     -   Username: **azurestack\\cloudadmin**
 
-    -   Password: \[your password -- should be the same as your Azure Stack Host Local Admin\].
+    -   Password: \[your password -- should be the same as your Azure Stack Host Local Admin\]
 
         ![Fields in the Windows PowerShell credential request dialog box are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image61.png "Windows PowerShell credential request dialog box")
 
@@ -501,11 +500,11 @@ Note: The popup may appear the PowerShell ISE
 
 18. This will load the resource group where you can see all the different resources provisioned to allow for the use of the SQL RP.
 
-19. Click **+New** in the Azure Stack Admin portal.
+19. Click **+New** in the Azure Stack Admin portal
 
     ![The New button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image67.png "New button")
 
-20. Click **Data + Storage** and notice that the **SQL Database** and **SQL HostingServer** now appear as options for you to provision.
+20. Click **Data + Storage** and notice that the **SQL Database** and **SQL HostingServer** now appear as options for you to provision
 
     ![The New and Data and Storage blades display with the previously defined options selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image68.png "New and Data and Storage blades")
 
@@ -513,11 +512,11 @@ Note: The popup may appear the PowerShell ISE
 
 ![Screenshot of an Azure Stack Deployment Taxonomy.](images/Hands-onlabstep-by-step-AzureStackimages/media/image69.png "Azure Stack Deployment Taxonomy")
 
-1.  Click **+New** in the Azure Stack Admin portal.
+1.  Click **+New** in the Azure Stack Admin portal
 
     ![The New button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image67.png "New button")
 
-2.  Click **Offers + Plans** followed by **Plan**.
+2.  Click **Offers + Plans** followed by **Plan**
 
     ![In the Marketplace blade, Offers and Plans is selected. In the Featured Apps blade, Plan is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image70.png "Marketplace and Featured Apps blades")
 
@@ -531,15 +530,15 @@ Note: The popup may appear the PowerShell ISE
 
         ![New plan blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image71.png "New plan blade")
 
-4.  Click **Services**.
+4.  Click **Services**
 
     ![Screenshot of the Services option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image72.png "Services option")
 
-5.  Next, check each of the **Services** listed, and click **Select**.
+5.  Next, check each of the **Services** listed, and click **Select**
 
     ![Services are listed in the Services blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image73.png "Services blade")
 
-6.  Click **Quotas**.
+6.  Click **Quotas**
 
     ![Screenshot of the Quotas option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image74.png "Quotas option")
 
@@ -547,7 +546,7 @@ Note: The popup may appear the PowerShell ISE
 
     ![The Quotas blade displays with Microsoft SQL Adapter selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image75.png "Quotas blade")
 
-8.  Click the **Microsoft.SQLAdapter,** followed by **Create new quota.**
+8.  Click the **Microsoft.SQLAdapter,** followed by **Create new quota**
 
     ![Screenshot of the Quotas blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image76.png "Quotas blade")
 
@@ -561,15 +560,15 @@ Note: The popup may appear the PowerShell ISE
 
         ![Screenshot of the Create Quota blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image77.png "Create Quota blade")
 
-10. Click the **SQLQuota** to assign this to the Microsoft.SQLAdapter.
+10. Click the **SQLQuota** to assign this to the Microsoft.SQLAdapter
 
     ![Screenshot of the Quotas blade with SQLQuota selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image78.png "Quotas blade")
 
-11. Click **OK** on the **Quotas** blade to assign these to **Prod-Plan-1**.
+11. Click **OK** on the **Quotas** blade to assign these to **Prod-Plan-1**
 
     ![OK is selected in the Quotas blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image79.png "Quotas blade")
 
-12. Click **Create** to provision the New Plan: **PROD-Plan-1**.
+12. Click **Create** to provision the New Plan: **PROD-Plan-1**
 
     ![Create is selected in the New plan blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image80.png "New plan blade")
 
@@ -577,7 +576,7 @@ Note: The popup may appear the PowerShell ISE
 
     ![Screenshot of the New button.](images/Hands-onlabstep-by-step-AzureStackimages/media/image67.png "New button")
 
-14. Click **Offers + Plans** followed by **Offer**.
+14. Click **Offers + Plans** followed by **Offer**
 
     ![In the Marketplace blade, Offers and Plans is selected. In the Featured Apps blade, Offer is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image81.png "Marketplace and Featured Apps blades")
 
@@ -597,7 +596,7 @@ Note: The popup may appear the PowerShell ISE
 
     ![Screenshot of the Resource group blade. Under Name, a callout points to prod-offer-1.](images/Hands-onlabstep-by-step-AzureStackimages/media/image83.png "Resource group blade")
 
-17. Click **prod-offer-1**.
+17. Click **prod-offer-1**
 
     ![Screenshot of the prod-offer-1 option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image84.png "prod-offer-1 option")
 
@@ -605,11 +604,11 @@ Note: The popup may appear the PowerShell ISE
 
     ![In the Offer blade, warning displays, and the Change state button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image85.png "Offer blade")
 
-19. Select **Public**.
+19. Select **Public**
 
     ![Public is selected in the Change state menu.](images/Hands-onlabstep-by-step-AzureStackimages/media/image86.png "Change state menu")
 
-20. The portal will immediately provide a notification about the update to the offer.
+20. The portal will immediately provide a notification about the update to the offer
 
     ![Updated offer successfully message screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image87.png "Updated offer successfully message")
 
@@ -617,7 +616,7 @@ Note: The popup may appear the PowerShell ISE
 
     ![Azure Stack dashboard screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image88.png "Azure Stack dashboard")
 
-22. Click **Get a subscription.**
+22. Click **Get a subscription**
 
     ![Get a subscription tile screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image89.png "Get a subscription tile")
 
@@ -625,11 +624,11 @@ Note: The popup may appear the PowerShell ISE
 
     -   ![In the Get a subscription blade, the Display name is Production. In the Choose an offer blade, PROD-Offer-1 is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image90.png "Get a subscription and Choose an offer blades")
 
-24. You will need to Refresh the window to start using the new Subscription.
+24. You will need to Refresh the window to start using the new Subscription
 
     ![Under the Subscription created message, the Refresh button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image91.png "Subscription created message")
 
-25. Once the portal refreshes, click **More Services \> Subscriptions.**
+25. Once the portal refreshes, click **More Services \> Subscriptions**
 
     ![In the Azure Stack window, More Services is selected, and under General, Subscriptions is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image92.png "Azure Stack window")
 
@@ -643,7 +642,7 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 ### Task 1: Create SQL Hosting Server
 
-1.  In the Azure Stack Admin portal, click **+New**, **Data + Storage** and then **SQL HostingServer**.
+1.  In the Azure Stack Admin portal, click **+New**, **Data + Storage** and then **SQL HostingServer**
 
     ![Options in the Azure Stack Admin portal, New blade, and Data and Storage blade are selected according to the previously defined selections.](images/Hands-onlabstep-by-step-AzureStackimages/media/image93.png "Azure Stack Admin portal")
 
@@ -663,15 +662,15 @@ The first step to getting the website up and running is to configure the SQL Dat
 
         ![In the Add a SQL Hosting Server blade, fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image94.png "Add a SQL Hosting Server blade")
 
-3.  Next, click **SKUs**.
+3.  Next, click **SKUs**
 
     ![SKUs option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image95.png "SKUs option")
 
-4.  Click **Create new SKU**.
+4.  Click **Create new SKU**
 
     ![The Create new SKU button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image96.png "Create new SKU")
 
-5.  Update the **Create SKU** blade with the following input and click **OK**.
+5.  Update the **Create SKU** blade with the following input and click **OK**:
 
     -   Name: **ContosoFinanceSQLPROD**
 
@@ -679,17 +678,19 @@ The first step to getting the website up and running is to configure the SQL Dat
 
     -   Tier: **Standalone**
 
-    -   Edition: **Enterprise** -- Tip in a production environment the edition should reflect the actual capabilities
+    -   Edition: **Enterprise** 
+    
+    -- Tip in a production environment the edition should reflect the actual capabilities
 
         ![Fields in the Create SKU blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image97.png "Create SKU blade")
 
-6.  Review the Add a **SQL Hosting Server** Blade and click **Create**.
+6.  Review the Add a **SQL Hosting Server** Blade and click **Create**
 
 **Note:** SKUs **can take up to an hour** to be visible in the portal. Users cannot create a database until the SKU is fully created.
 
 ### Task 2: Register resource providers in the tenant subscription
 
-1.  Launch the Azure Stack tenant portal and click More services -\> search for Subscriptions -\> click the subscription and then click Resource Providers.
+1.  Launch the Azure Stack tenant portal and click More services -\> search for Subscriptions -\> click the subscription and then click Resource Providers
 
 2.  Click Register by each of the unregistered resource providers except Microsoft.Resources. After the RPs are registered your screen should look like this:
 
@@ -697,11 +698,11 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 ### Task 3: Deploy SQL DB on Azure Stack 
 
-1.  In the Azure Stack Tenant portal, click **+New**, **Data + Storage** followed by **SQL Database**.
+1.  In the Azure Stack Tenant portal, click **+New**, **Data + Storage** followed by **SQL Database**
 
     ![In the Azure Stack portal, in the New blade, Data and Storage is selected. In the Data and Storage blade, SQL Database is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image99.png "New and Data and Storage blades")
 
-2.  Complete the **Create Database** using the following inputs.
+2.  Complete the **Create Database** using the following inputs:
 
     -   Database Name: **ContosoFinanceWebDB**
 
@@ -713,23 +714,23 @@ The first step to getting the website up and running is to configure the SQL Dat
 
         ![Screenshot of the Create database blade with fields set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image100.png "Create database blade")
 
-3.  Next, click **SKU**.
+3.  Next, click **SKU**
 
     ![SKU option screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image101.png "SKU option")
 
-4.  Select the **ContosoFinanceSQLPROD** SKU.
+4.  Select the **ContosoFinanceSQLPROD** SKU
 
     ![In the Select a SKU blade, ContosoFinanceSQLProd is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image102.png "Select a SKU blade")
 
-5.  Click **Login**.
+5.  Click **Login**
 
     ![Screenshot of the Login option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image103.png "Login option")
 
-6.  Click **Create a new login**.
+6.  Click **Create a new login**
 
     ![Create a new login is selected in the Select a Login blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image104.png "Select a Login blade")
 
-7.  Complete the **New Login** blade using these inputs and click **OK**.
+7.  Complete the **New Login** blade using these inputs and click **OK**:
 
     -   Database Login: **ContosoFinanceWebDB**
 
@@ -737,7 +738,7 @@ The first step to getting the website up and running is to configure the SQL Dat
 
         ![Fields in the New Login blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image105.png "New Login blade")
 
-8.  Review the **Create Database** blade and click **Create.**
+8.  Review the **Create Database** blade and click **Create**
 
     ![Fields in the Create Database blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image106.png "Create Database blade")
 
@@ -763,21 +764,21 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 1: Create the Web App
 
-1.  From within the Azure tenant portal, click New -\> Web + Mobile -\> Web App.
+1.  From within the Azure tenant portal, click New -\> Web + Mobile -\> Web App
 
-2.  On the **Everything** blade, select **Web App** followed by **Create**.
+2.  On the **Everything** blade, select **Web App** followed by **Create**
 
     ![Screenshot of the Web App option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image109.png "Web App option")
 
-3.  On the **Web App** blade, select **App Service plan/Location**.
+3.  On the **Web App** blade, select **App Service plan/Location**
 
     ![App Service plan/Location option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image110.png "App Service plan/Location option")
 
-4.  Create a new App Service plan called **ContosoFinanceWebPlan** with the **D1 Shared** pricing tier and click **OK**.
+4.  Create a new App Service plan called **ContosoFinanceWebPlan** with the **D1 Shared** pricing tier and click **OK**
 
     ![Screenshot of the D1 Shared pricing tier option.](images/Hands-onlabstep-by-step-AzureStackimages/media/image111.png "D1 Shared pricing tier option")
 
-5.  On the **Web App** blade, specify the following configuration, and click **Create.**
+5.  On the **Web App** blade, specify the following configuration, and click **Create:**
 
     -   App Name: **Specify a unique and valid URL (until the green check mark appears)**
 
@@ -787,7 +788,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 2: Provision an Azure Storage Account
 
-1.  In the Azure Tenant portal, click **+New, Data + Storage,** and **Storage account**.
+1.  In the Azure Tenant portal, click **+New, Data + Storage,** and **Storage account**
 
     ![In the New and Data and Storage blades, the previously defined options are selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image113.png "New and Data and Storage blades")
 
@@ -799,17 +800,17 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
         ![Create storage account blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image114.png "Create storage account blade")
 
-3.  Click **Create**.
+3.  Click **Create**
 
     ![Create button screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image115.png "Create button")
 
-4.  After the storage account has completed provisioning, open the storage account by clicking **More services,** **Storage accounts**, and storage account name.
+4.  After the storage account has completed provisioning, open the storage account by clicking **More services,** **Storage accounts**, and storage account name
 
-5.  On the **Storage** account blade, scroll down, and select the **Access keys** option.
+5.  On the **Storage** account blade, scroll down, and select the **Access keys** option
 
     ![Under Settings, Access keys is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image116.png "Settings section")
 
-6.  On the **Access keys** blade, click the copy button by **key1** to copy the **Key**. Put the value in notepad for later reference.
+6.  On the **Access keys** blade, click the copy button by **key1** to copy the **Key**. Put the value in notepad for later reference
 
     ![The Key 1 copy button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image117.png "Key 1 copy button")
 
@@ -825,11 +826,11 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 3: Update the configuration strings
 
-1.  On the left pane of the **contosofinanceweb** Web App, click on **Application settings**.
+1.  On the left pane of the **contosofinanceweb** Web App, click on **Application settings**
 
     ![Under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image121.png "Settings section")
 
-2.  Scroll down and locate the **App settings** section.
+2.  Scroll down and locate the **App settings** section
 
     ![Screenshot of the App settings section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image122.png "App settings section")
 
@@ -847,7 +848,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 5.  Locate **Connection Strings** below App settings in the Azure tenant portal, add a new **Connection String** with the following values:
 
-    -   Name: **ContosoFinance **
+    -   Name: **ContosoFinance**
 
     -   Value: **enter the Connection String for the SQL Database in Azure Stack you just updated**
 
@@ -859,19 +860,19 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 4: Publish the Contoso Financial Web Application
 
-1.  From within the web app blade, click on **Deployment Options**.
+1.  From within the web app blade, click on **Deployment Options**
 
     ![Deployment options is selected under Deployment.](images/Hands-onlabstep-by-step-AzureStackimages/media/image125.png "Deployment section")
 
-2.  Click **Choose Source**, and then **External Repository**.
+2.  Click **Choose Source**, and then **External Repository**
 
     ![In the Deployment option blade, Choose source is selected. In the Choose source blade, External Repository is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image126.png "Deployment option and Choose source blades")
 
-3.  Paste <https://github.com/opsgility/contosofinanceweb> as the **Repository URL** and click **OK**.
+3.  Paste <https://github.com/opsgility/contosofinanceweb> as the **Repository URL** and click **OK**
 
-4.  Click on the Deployment options button and monitor until the application is deployed.
+4.  Click on the Deployment options button and monitor until the application is deployed
 
-5.  Click the Overview tab, and then click the URL. You should see the Contoso Finance web app.
+5.  Click the Overview tab, and then click the URL. You should see the Contoso Finance web app
 
     ![The URL is selected in the App Service blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image127.png "App Service blade")
 
@@ -889,21 +890,21 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 ### Task 1: Provision the offers Web API App
 
-1.  Using the Azure Stack Tenant portal, click **+New**, **Web + Mobile**, and click **API App**.
+1.  Using the Azure Stack Tenant portal, click **+New**, **Web + Mobile**, and click **API App**
 
     ![Screenshot of the API App button.](images/Hands-onlabstep-by-step-AzureStackimages/media/image129.png "API App button")
 
-2.  Click on **Create**.
+2.  Click on **Create**
 
-3.  On the new **API App** blade, **specify a unique name** for the App Name, and ensure the previously used Resource Group and App Service Plan is selected.
+3.  On the new **API App** blade, **specify a unique name** for the App Name, and ensure the previously used Resource Group and App Service Plan is selected
 
-4.  After the values are accepted click **Create**.
+4.  After the values are accepted click **Create**
 
-5.  On the **App Service** blade, scroll down, and click on **CORS** within the API section of the left pane.
+5.  On the **App Service** blade, scroll down, and click on **CORS** within the API section of the left pane
 
     ![Under API, CORS is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image130.png "API section")
 
-6.  In the **ALLOWED ORIGINS** text box specify \* and click **Save**.
+6.  In the **ALLOWED ORIGINS** text box specify \* and click **Save**
 
     ![In the App Service blade, Allowed Origins is set to asterisk, and Save is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image131.png "App Service blade")
 
@@ -911,11 +912,11 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
     ![Under Settings in the App Service blade, Application settings is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image132.png "App Service blade")
 
-8.  Scroll down, and locate the **Connection strings** section.
+8.  Scroll down, and locate the **Connection strings** section
 
     ![Screenshot of the Connection strings section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image133.png "Connection strings section")
 
-9.  Locate **Connection Strings** below App settings in the Azure global portal Add a new **Connection String** with the following values:
+9.  Locate **Connection Strings** below App settings in the Azure global portal.  Add a new **Connection String** with the following values:
 
     -   Name: **ContosoFinance (must match exactly -- case sensitive)**
 
@@ -925,30 +926,31 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
         ![the Connection strings fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image124.png "Connection strings fields")
 
-10. Click **Save**.
+10. Click **Save**
 
 ### Task 2: Deploy the Contoso.Apps.Financial.Offers project
 
-1.  From within the API app blade, click on **Deployment options**.
+1.  From within the API app blade, click on **Deployment options**
 
     ![Under Deployment, Deployment options is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image125.png "Deployment section")
 
-2.  Click **Choose Source**, and then **External Repository**.
+2.  Click **Choose Source**, and then **External Repository**
 
     ![In the Deployment option blade, Choose Source is selected. In the Choose source blade, External Repository is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image126.png "Deployment option and Choose source blades")
 
-3.  Paste <https://github.com/opsgility/contosofinanceoffers> as the **Repository URL** and click **OK**.
+3.  Paste <https://github.com/opsgility/contosofinanceoffers> as the **Repository URL** and click **OK**
 
-4.  Click on the Deployment options button and monitor until the application is deployed.
+4.  Click on the Deployment options button and monitor until the application is deployed
 
-5.  On the **Overview** tab, copy the URL for the web app to the clipboard.
+5.  On the **Overview** tab, copy the URL for the web app to the clipboard
 
 ### Task 3: Update the Application Settings of the Web App with the API URL
 
-1.  Open the ContosoFinanceWeb application in the Azure Stack Tenant portal and click on Application settings.\
+1.  Open the ContosoFinanceWeb application in the Azure Stack Tenant portal and click on Application settings
+
     ![In the App Service blade, under settings, Application settings is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image134.png "App Service blade")
 
-2.  Scroll down and locate the **App settings** section.
+2.  Scroll down and locate the **App settings** section
 
     ![Screenshot of the App settings section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image135.png "App settings section")
 
@@ -956,19 +958,21 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
     -   Key: **offersAPIUrl**
 
-    -   Value: enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end. Example: <https://contosofinanceapi.azurewebsites.net/api/get>
+    -   Value: enter the **HTTPS** URL for the Offers API App with **/api/get** appended to the end 
+    
+    Example: <https://contosofinanceapi.azurewebsites.net/api/get>
 
         ![Under App settings, offersAPIUrl and its URL are selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image136.png "App settings section")
 
-4.  Click on **Save**.
+4.  Click on **Save**
 
 **Note:** Ensure the API URL is using **SSL** (https://), or you will see a CORS errors when loading the webpage.
 
-5.  Connect to the URL of the **contosofinanceweb** Web App.
+5.  Connect to the URL of the **contosofinanceweb** Web App
 
     ![In the App Service blade, the URL link is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image137.png "App Service blade")
 
-6.  On the homepage, you should see the latest offers populated from the offers API.
+6.  On the homepage, you should see the latest offers populated from the offers API
 
     ![Screenshot of the Contoso Finance webpage.](images/Hands-onlabstep-by-step-AzureStackimages/media/image138.png "Contoso Finance webpage")
 
@@ -984,7 +988,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
     ![In the Azure Stack Host, the Clone or download button is selected, and under Clone with HTTPS, the Download ZIP button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image139.png "Azure Stack Host")
 
-2.  From the Tenant portal, click **+New**, **Web + Mobile**, and then click **Function App**.
+2.  From the Tenant portal, click **+New**, **Web + Mobile**, and then click **Function App**
 
     ![Function App option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image140.png "Function App option")
 
@@ -1002,17 +1006,17 @@ Contoso wants to automate the process of generating applications in PDF format a
 
         ![Create blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image141.png "Create blade")
 
-4.  Click **Create**.
+4.  Click **Create**
 
-5.  Using the Azure Stack portal, open the Function App you just created, click **Functions** and then **New Function**.
+5.  Using the Azure Stack portal, open the Function App you just created, click **Functions** and then **New Function**
 
     ![The New function button is selected in the Function Apps blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image142.png "Function Apps blade")
 
-6.  Locate the **Queue trigger** box and click **C\#**.
+6.  Locate the **Queue trigger** box and click **C\#**
 
     ![C\# is selected on the Queue trigger page.](images/Hands-onlabstep-by-step-AzureStackimages/media/image143.png "Queue trigger page")
 
-7.  Complete the **New Function** blade using the following inputs and click **Create**.
+7.  Complete the **New Function** blade using the following inputs and click **Create**
 
     -   Language: **C\#**
 
@@ -1022,7 +1026,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
         ![Fields in the New Function blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image144.png "New Function blade")
 
-8.  Expand the View files area on the right of the code window, and click **Upload**.
+8.  Expand the View files area on the right of the code window, and click **Upload**
 
     ![In the View files section, Upload is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image145.png "View files section")![In the View files section, the Upload link is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image146.png "View files section")
 
@@ -1038,11 +1042,11 @@ Contoso wants to automate the process of generating applications in PDF format a
 
     -   ViewModels.csx
 
-10. Click on **run.csx** to refresh the code editor.
+10. Click on **run.csx** to refresh the code editor
 
     ![Under View files, run.csx is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image147.png "View files section")
 
-11. Select the **name of your function app followed by** **Application settings.**
+11. Select the **name of your function app followed by** **Application settings**
 
     ![The previously mentioned settings are selected in the Function Apps blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image148.png "Function Apps blade")
 
@@ -1062,7 +1066,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
         ![Under Application settings, ContosoFinance is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image149.png "Application settings section")
 
-14. Scroll back up to the top of the blade and click **Save.**
+14. Scroll back up to the top of the blade and click **Save**
 
     ![the Save button is selected in the Function Apps blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image150.png "Function Apps blade")
 
@@ -1074,25 +1078,25 @@ In this exercise, you will provision the admin website to be used by employees t
 
 ### Task 1: Provision the Contoso Finance Admin Web App
 
-1.  In the Azure tenant portal, click **New**, **Web + mobile**, and select **Web App**.
+1.  In the Azure tenant portal, click **New**, **Web + mobile**, and select **Web App**
 
     ![The previously mentioned selections are made in the Azure tenant portal.](images/Hands-onlabstep-by-step-AzureStackimages/media/image151.png "Azure tenant portal")
 
-2.  Specify a **unique URL** for the Web App, ensure the **same App Service Plan** as well as the **ContosoFinanceWeb** resource group you have used throughout the lab are selected.
+2.  Specify a **unique URL** for the Web App, ensure the **same App Service Plan** as well as the **ContosoFinanceWeb** resource group you have used throughout the lab are selected
 
     ![Fields in the Create blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image152.png "Create blade")
 
-3.  After the values are accepted, click **Create**.
+3.  After the values are accepted, click **Create**
 
-4.  Navigate to the **App Service** blade for the Admin app recently provisioned.
+4.  Navigate to the **App Service** blade for the Admin app recently provisioned
 
     ![contosofinanceadmin option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image153.png "contosofinanceadmin option")
 
-5.  On the **App Service** blade, click on **Application settings** in the left pane.
+5.  On the **App Service** blade, click on **Application settings** in the left pane
 
     ![Under Settings, Application settings is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image154.png "Settings section")
 
-6.  Scroll down and locate the **Connection strings** section.
+6.  Scroll down and locate the **Connection strings** section
 
     ![Screenshot of the App Services blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image155.png "App Services blade")
 
@@ -1106,29 +1110,29 @@ In this exercise, you will provision the admin website to be used by employees t
 
         ![Connection strings fields screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image124.png "Connection strings fields")
 
-8.  Click **Save**.
+8.  Click **Save**
 
 ### Task 2: Deploy the call center admin Web App from Visual Studio
 
-1.  From within the web app blade, click on **Deployment options**.
+1.  From within the web app blade, click on **Deployment options**
 
     ![Under Deployment, Deployment options is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image125.png "Deployment section")
 
-2.  Click **Choose Source**, and then **External Repository**.
+2.  Click **Choose Source**, and then **External Repository**
 
     ![In the Deployment option blade, Choose source is selected. In the Choose a source blade, External Repository is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image126.png "Deployment option and Choose a source blades")
 
-3.  Paste <https://github.com/opsgility/contosofinanceadmin> as the **Repository URL** and click **OK**.
+3.  Paste <https://github.com/opsgility/contosofinanceadmin> as the **Repository URL** and click **OK**
 
-4.  Click on the Deployment options button and monitor until the application is deployed.
+4.  Click on the Deployment options button and monitor until the application is deployed
 
-5.  On the **Overview** tab, copy the URL for the web app to the clipboard.
+5.  On the **Overview** tab, copy the URL for the web app to the clipboard
 
-6.  Connect to the **contosofinanceadmin** portal to see the list of applications that have been completed.
+6.  Connect to the **contosofinanceadmin** portal to see the list of applications that have been completed
 
     ![Screenshot of the Contoso webpage for Contoso Finance Admin.](images/Hands-onlabstep-by-step-AzureStackimages/media/image156.png "Contoso webpage")
 
-Note: In production this application would be secured using Azure AD for authentication purposes.
+**Note**: In production this application would be secured using Azure AD for authentication purposes.
 
 7.  Since the application is fully deployed, you will want to see it work end to end. Open the URL for the contosofinanceweb Web App. The application will load in the browser.
 
@@ -1140,11 +1144,11 @@ Note: In production this application would be secured using Azure AD for authent
 
     ![Screenshot of the Today\'s Offers webpage area.](images/Hands-onlabstep-by-step-AzureStackimages/media/image159.png "Today's Offers webpage area")
 
-9.  Click **Apply**.
+9.  Click **Apply**
 
     ![Under Product Name, the Apply button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image160.png "Apply button")
 
-10. Complete the Application and click **Continue** followed by **Complete Application** on the confirmation screen.
+10. Complete the Application and click **Continue** followed by **Complete Application** on the confirmation screen
 
     ![Screenshot of the Contoso Finance application.](images/Hands-onlabstep-by-step-AzureStackimages/media/image161.png "Contoso Finance application")
 
@@ -1156,7 +1160,7 @@ Note: In production this application would be secured using Azure AD for authent
 
     ![Screenshot of the Contoso webpage Contoso Finance Admin section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image164.png "Contoso Finance Admin section")
 
-12. Notice the details of the application. This data is stored in SQL DB running in PaaS on Azure Stack. Click **Download application to view a sample PDF.**
+12. Notice the details of the application. This data is stored in SQL DB running in PaaS on Azure Stack. Click **Download application to view a sample PDF**.
 
     ![Under Application Details, the Download application link is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image165.png "Download application link")
 
@@ -1166,6 +1170,6 @@ Duration: 10 minutes
 
 In this final task you will clean up the Azure Resources that you have create for the hands-on lab. This task is optional.
 
-1.  If provisioned using the Azure Stack Developer Kit in an Azure VM, delete the resource group your Azure Stack Host VM is running in.
+1.  If provisioned using the Azure Stack Developer Kit in an Azure VM, delete the resource group your Azure Stack Host VM is running in
 
-2.  If running on your own Developer Kit, delete all the resource groups from the Azure Stack portal that you created during the execution of this lab.
+2.  If running on your own Developer Kit, delete all the resource groups from the Azure Stack portal that you created during the execution of this lab
