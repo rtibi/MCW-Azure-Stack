@@ -37,8 +37,9 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
             - [Sub Task 2: Create App Service Scripts](#sub-task-2-create-app-service-scripts)
             - [Sub Task 3: Deploy Supporting File Server](#sub-task-3-deploy-supporting-file-server)
             - [Sub Task 4: Deploying a Supporting SQL Server](#sub-task-4-deploying-a-supporting-sql-server)
-            - [Sub Task 5: Setup Application Identity](#sub-task-5-setup-application-identity)
-            - [Sub Task 6: Install the App Service Resource Provider](#sub-task-6-install-the-app-service-resource-provider)
+            - [Sub Task 5: Enable Contained Database Authentication](#sub-task-5-enable-contained-database-authentication)
+            - [Sub Task 6: Setup Application Identity](#sub-task-6-setup-application-identity)
+            - [Sub Task 7: Install the App Service Resource Provider](#sub-task-7-install-the-app-service-resource-provider)
         - [Task 2: Deploy the Azure Stack SQL DB Resource Provider](#task-2-deploy-the-azure-stack-sql-db-resource-provider)
         - [Task 3: Create Azure Stack Deployment Taxonomy for Tenets](#task-3-create-azure-stack-deployment-taxonomy-for-tenets)
     - [Exercise 2: Deploy the SQL Hosting Server and DB on Azure Stack](#exercise-2-deploy-the-sql-hosting-server-and-db-on-azure-stack)
@@ -112,11 +113,6 @@ Duration: 2-3 hours
 
 In this exercise, you will configure the Azure Stack environment for the lab. You will install the resource providers for Azure SQL Database and Azure App Service, from there you will configure the taxonomy for the Azure Stack hands-on lab.
 
-    > **Tip**: To minimize prompts from PowerShell, set your execution policy to bypass.
-
-    ```
-    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser.
-    ```
 
 ### Task 1: Deploy the Azure Stack App Service Resource Provider
 
@@ -126,9 +122,9 @@ In this exercise, you will configure the Azure Stack environment for the lab. Yo
 
     ![Screenshot of Azure Stack Host File Explorer.](images/Hands-onlabstep-by-step-AzureStackimages/media/image24.png "Azure Stack Host File Explorer")
 
-The following screenshot shows the installer executable:
+    The following screenshot shows the installer executable:
 
-![In the Azure Stack Host File Explorer, a callout points to the AppService executable.](images/Hands-onlabstep-by-step-AzureStackimages/media/image25.png "Azure Stack Host File Explorer")
+    ![In the Azure Stack Host File Explorer, a callout points to the AppService executable.](images/Hands-onlabstep-by-step-AzureStackimages/media/image25.png "Azure Stack Host File Explorer")
 
 #### Sub Task 2: Create App Service Scripts
 
@@ -192,7 +188,7 @@ When prompted use the following values:
 
 5.  Use **AzSHOLFS** as the new resource group name and click **Create**. It may take 10-15 minutes to complete provisioning.
 
-    **Note:** The ARM template automatically creates the local users needed for the App Service Resource Provider.
+    > **Note:** The ARM template automatically creates the local users needed for the App Service Resource Provider.
 
 6.  After the template deployment is complete, open the new virtual machine from clicking on **Virtual Machines, FileServerVM** and Note the Public IP address/DNS name label for later reference
 
@@ -256,11 +252,9 @@ When prompted use the following values:
 
     ![In the Create virtual machine blade, Basics is selected. In the Basics blade, the previously mentioned fields are set.](images/Hands-onlabstep-by-step-AzureStackimages/media/image32.png "Create virtual machine and Basics blades")
 
-3.  Find and select A3 Standard as the virtual machine size and click **Select**
+3.  Search for A3 and then select A3 Standard as the virtual machine size and click **Select**
 
-    -   ![A3 Standard is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image33.png "A3 Standard virtual mchine size")
-
-4.  On the Settings blade, click **Network security group (firewall)** and then click **+ Add an inbound rule.** Change the service to **MS SQL** and click **OK** until you are back to the settings blade.
+4.  On the Settings blade, click **Network security group (firewall)** and then click **+ Add an inbound rule.** Click **Basic** to change to **Advanced**, and then change the service to **MS SQL** and click **OK** until you are back to the settings blade.
 
     ![Fields in the Settings blade Add inbound security rule section are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image34.png "Settings blade")
 
@@ -282,7 +276,42 @@ When prompted use the following values:
 
 9.  Note the Public IP address of the VM for later reference
 
-#### Sub Task 5: Setup Application Identity
+#### Sub Task 5: Enable Contained Database Authentication
+
+> **Note**: The Azure App Service resource provider requires that the SQL Server be configured for contained database authentication. 
+
+1. In PowerShell ISE paste in the following script and replace the placeholder text with the public IP address of the SQL Server. 
+
+    ```
+    $dataSource = "[replace with SQL Server IP]"
+    $database = "Master"
+
+    $sqlText = @"
+    sp_configure 'contained database authentication', 1;
+    RECONFIGURE;
+    "@
+
+
+    $connectionString = "Data Source=$dataSource; " +
+            "user id=sqlserveradmin; password=demo@pass123;" +
+            "Initial Catalog=$database" 
+
+    $connection = new-object system.data.SqlClient.SQLConnection($connectionString)
+    $command = new-object system.data.sqlclient.sqlcommand($sqlCommand,$connection)
+    $connection.Open()
+    $sqlCommand = new-object System.Data.SqlClient.SqlCommand
+    $sqlCommand.CommandTimeout = 120
+    $sqlCommand.Connection = $connection
+    $sqlCommand.CommandText= $sqlText
+    $sqlCommand.ExecuteReader()
+    $connection.Close()
+
+    ```
+2. Click the green arrow (play) button to execute the script. 
+
+
+
+#### Sub Task 6: Setup Application Identity
 
 1.  Switch back to the Azure Stack host to configure an Azure AD Service Principal for Azure Functions.
 
@@ -320,17 +349,18 @@ When prompted specify the following:
 
 6.  Select the **App Service** returned from search results and then click **Settings -\> Required Permissions**
 
-    ![Screenshot of the App Service and Settings blades.](images/Hands-onlabstep-by-step-AzureStackimages/media/image39.png "App Service and Settings blades")
 
 7.  Select **Grant Permissions** and click **Yes**
 
-#### Sub Task 6: Install the App Service Resource Provider
+
+#### Sub Task 7: Install the App Service Resource Provider
 
 1.  Next start the Azure Stack App Service resource provider deployment by navigating to C:\\HOL folder using File Explorer, and double click the **AppService.msi** file to start the installation
 
 2.  Click **Deploy App Service or upgrade to the latest version**
 
-    ![In the Microsoft Azure App Service 1.1 window, the Deploy App Service or upgrade to the latest version radio button is called out.](images/Hands-onlabstep-by-step-AzureStackimages/media/image40.png "App Service window")
+    ![In the Microsoft Azure App Service 1.3 window, the Deploy App Service or upgrade to the latest version radio button is called out.](imags/hands-onlabstep-by-step-AzureStackimages/media/image40.png "App Service window")
+
 
 3.  Review and accept the Microsoft Software License Terms and then click **Next**
 
@@ -342,11 +372,11 @@ When prompted specify the following:
 
 6.  Click Connect, and then specify your Azure subscription information. After logging in, click the dropdown by the subscription and location dropdown to specify the correct configuration.
 
-    ![Fields in the Microsoft Azure App Service 1.1 window display Azure App Service information.](images/Hands-onlabstep-by-step-AzureStackimages/media/image42.png "Microsoft Azure App Service 1.1 window")
+    ![Fields in the Microsoft Azure App Service 1.3 window display Azure App Service information.](images/Hands-onlabstep-by-step-AzureStackimages/media/image42.png "Microsoft Azure App Service 1.3 window")
 
 7.  Accept the defaults on the network configuration by clicking next
 
-    ![Microsoft Azure App Service 1.1 network configuration fields display.](images/Hands-onlabstep-by-step-AzureStackimages/media/image43.png "Microsoft Azure App Service 1.1 window")
+    ![Microsoft Azure App Service 1.3 network configuration fields display.](images/Hands-onlabstep-by-step-AzureStackimages/media/image43.png "Microsoft Azure App Service 1.3 window")
 
 8.  Specify the following configuration for the file share:
 
@@ -360,41 +390,43 @@ When prompted specify the following:
 
 -   File Share User Password: demo\@pass123
 
-    ![Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image44.png "Microsoft Azure App Service 1.1 window")
+    ![Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image44.png  "Microsoft Azure App Service 1.3 window")
+
+
 
 9.  On the next screen, paste in the application id created earlier and specify the following certificate information:
 
--   Identity Application ID: your application id key created earlier
+    -   Identity Application ID: your application id key created earlier
 
--   Identity Application Certificate (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\sso.appservice.local.azurestack.external.pfx
+    -   Identity Application Certificate (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\sso.appservice.local.azurestack.external.pfx
 
--   Identity Application Certificate (\*.pfx) Password: demo\@pass123
+    -   Identity Application Certificate (\*.pfx) Password: demo\@pass123
 
--   Azure Resource Manager (ARM) root certificate file (\*.cer): C:\\HOL\\AzureStackCertificationAuthory.cer
+    -   Azure Resource Manager (ARM) root certificate file (\*.cer): C:\\HOL\\AzureStackCertificationAuthority.cer
 
-    ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image45.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image45.png "Microsoft Azure App Service 1.3 window")
 
 10. On the next page you will specify the remaining certificates:
 
--   App Service default SSL certificate file (\*.pfx) : C:\\HOL\\AppServiceHelperScripts\\\_.appservice.local.azurestack.external.pfx
+    -   App Service default SSL certificate file (\*.pfx) : C:\\HOL\\AppServiceHelperScripts\\\_.appservice.local.azurestack.external.pfx
 
--   App Service API SSL certificate file (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\api.appservice.local.azurestack.external.pfx
+    -   App Service API SSL certificate file (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\api.appservice.local.azurestack.external.pfx
 
--   App Service Publisher certificate file (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\ftp.appservice.local.azurestack.external.pfx
+    -   App Service Publisher certificate file (\*.pfx): C:\\HOL\\AppServiceHelperScripts\\ftp.appservice.local.azurestack.external.pfx
 
-    ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png "Microsoft Azure App Service 1.3 window")
 
 11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**
 
-    ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image47.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image47.png  "Microsoft Azure App Service 1.3 window")
 
 12. Accept the defaults for the VMs to provision for the App Service resource provider by clicking **Next**
 
-    ![The Microsoft Azure App Service 1.1 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image48.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.3 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image48.png "Microsoft Azure App Service 1.3 window")
 
 13. Except the default for the platform image by clicking **Next**
 
-    ![The default platform image displays in the Microsoft Azure App Service 1.1 window.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png "Microsoft Azure App Service 1.1 window")
+    ![The default platform image displays in the Microsoft Azure App Service 1.3 window.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png  "Microsoft Azure App Service 1.3 window")
 
 14. Specify the following user account for both administrator accounts and click Next
 
@@ -402,11 +434,11 @@ When prompted specify the following:
 
 -   Password: demo\@pass123
 
-    ![The Microsoft Azure App Service 1.1 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image50.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.3 window displays the roles and passwords for the app service cloud.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png "Microsoft Azure App Service 1.3 window")
 
 15. Click the Checkbox next to Select and click next to start the deployment and then click **Next**
 
-    ![The Microsoft Azure App Service 1.1 window displays with a summary of settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image51.png "Microsoft Azure App Service 1.1 window")
+    ![The Microsoft Azure App Service 1.1 window displays with a summary of settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image51.png "Microsoft Azure App Service 1.3 window")
 
 16. The final step is to validate the App Service on Azure Stack installation. TO validate the App Service installation perform the following 2 steps:
 
@@ -433,7 +465,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
 5.  From this webpage, download the version of the SQL Resource Provider that matches your version of Azure Stack
 
-    ![The SQL Resource Provider version link is selected in the Azure Stack build section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image55.png "Azure Stack build section")
+    ![The SQL Resource Provider version link is selected in the Azure Stack build section.](images/Hands-onlabstep-by-step-AzureStackimages/media/image55.png  "Azure Stack build section")
 
 6.  Once it is downloaded, using Windows Explorer on the Azure Stack Host, navigate to your downloads directory. Double click the file to install the package. You will need to click **Run** at the Security Warning prompt.
 
@@ -457,13 +489,13 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
     .\DeploySQLProvider.ps1
     ```
 
-![Command screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image59.png "Command")
+    ![Command screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image59.png "Command")
 
 11. At the **Privileged Endpoint** prompt, enter the **IP Address that you found using Hyper-V Manager**, and click **OK**. In the example the IP is **192.168.200.225.**
 
     ![Screenshot of the Priviledged Endpoint field with the IP address displaying.](images/Hands-onlabstep-by-step-AzureStackimages/media/image60.png "Priviledged Endpoint field")
 
-**Note**: The popup may appear the PowerShell ISE.
+    > **Note**: The popup may appear the PowerShell ISE.
 
 12. Next, you will be prompted for the **Azure Stack Cloud Admin** credential. Enter the following user name along with your password:
 
@@ -517,9 +549,8 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
 ![Screenshot of an Azure Stack Deployment Taxonomy.](images/Hands-onlabstep-by-step-AzureStackimages/media/image69.png "Azure Stack Deployment Taxonomy")
 
-1.  Click **+New** in the Azure Stack Admin portal
+1.  Click **+Create a resource** in the Azure Stack Admin portal
 
-    ![The New button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image67.png "New button")
 
 2.  Click **Offers + Plans** followed by **Plan**
 
