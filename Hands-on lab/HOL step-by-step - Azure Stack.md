@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -112,9 +112,11 @@ Duration: 2-3 hours
 
 In this exercise, you will configure the Azure Stack environment for the lab. You will install the resource providers for Azure SQL Database and Azure App Service, from there you will configure the taxonomy for the Azure Stack hands-on lab.
 
-Tip: To minimize prompts from PowerShell, set your execution policy to bypass.
+    > **Tip**: To minimize prompts from PowerShell, set your execution policy to bypass.
 
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser.
+    ```
+    Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser.
+    ```
 
 ### Task 1: Deploy the Azure Stack App Service Resource Provider
 
@@ -174,7 +176,7 @@ When prompted use the following values:
 
 #### Sub Task 3: Deploy Supporting File Server
 
-**Note:** Azure App Service requires the use of a file server. You will use an ARM template to create a standalone file server for App Service.
+> **Note:** Azure App Service requires the use of a file server. You will use an ARM template to create a standalone file server for App Service.
 
 1.  Launch the Azure Stack Administration portal if it isn't open
 
@@ -190,7 +192,7 @@ When prompted use the following values:
 
 5.  Use **AzSHOLFS** as the new resource group name and click **Create**. It may take 10-15 minutes to complete provisioning.
 
-**NOTE:** The ARM template automatically creates the local users needed for the App Service Resource Provider.
+    **Note:** The ARM template automatically creates the local users needed for the App Service Resource Provider.
 
 6.  After the template deployment is complete, open the new virtual machine from clicking on **Virtual Machines, FileServerVM** and Note the Public IP address/DNS name label for later reference
 
@@ -491,7 +493,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![The Password field is selected in the Windows PowerShell ISE - Input page.](images/Hands-onlabstep-by-step-AzureStackimages/media/image64.png "Windows PowerShell ISE - Input page")
 
-**Note:** The script will run for at least 25 mins. Please wait until it completes prior to moving on to the next step.
+    > **Note:** The script will run for at least 25 mins. Please wait until it completes prior to moving on to the next step.
 
 16. Once the SQL RP is installed, the following message will appear. Close any Azure Stack portal sessions and restart them to update the portal UI.
 
@@ -689,7 +691,7 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 6.  Review the Add a **SQL Hosting Server** Blade and click **Create**
 
-**Note:** SKUs **can take up to an hour** to be visible in the portal. Users cannot create a database until the SKU is fully created.
+    > **Note:** SKUs **can take up to an hour** to be visible in the portal. Users cannot create a database until the SKU is fully created.
 
 ### Task 2: Register resource providers in the tenant subscription
 
@@ -753,11 +755,11 @@ The first step to getting the website up and running is to configure the SQL Dat
 
     ![In the SQL Database blade, the connection string is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image108.png "SQL Database blade")
 
-**Note:** If the clipboard copy does not work, you can use the following sample text for your environment. You will need to alter this text to match your configuration.
+    > **Note:** If the clipboard copy does not work, you can use the following sample text for your environment. You will need to alter this text to match your configuration.
 
-```
-Data Source=X.X.X.X,1433;Initial Catalog=ContosoFinanceWebDB;User ID=ContosoFinanceWebDB;Password=demo\@pass123
-```
+    ```
+    Data Source=X.X.X.X,1433;Initial Catalog=ContosoFinanceWebDB;User ID=ContosoFinanceWebDB;Password=demo\@pass123
+    ```
 
 ## Exercise 3: Deploy Contoso Financial Web Application
 
@@ -825,7 +827,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
     ![In Notepad, the connection string displays.](images/Hands-onlabstep-by-step-AzureStackimages/media/image120.png "Notepad")
 
-**Note:** If the copy to clipboard button does not work, you may need to highlight the key and copy by right-clicking. Some versions of Internet Explorer have issues with this functionality.
+    > **Note:** If the copy to clipboard button does not work, you may need to highlight the key and copy by right-clicking. Some versions of Internet Explorer have issues with this functionality.
 
 ### Task 3: Update the configuration strings
 
@@ -879,7 +881,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
     ![The URL is selected in the App Service blade.](images/Hands-onlabstep-by-step-AzureStackimages/media/image127.png "App Service blade")
 
-**Note:** You may get an error about CORS. This can be ignored, as it will be configured later in the lab.
+    > **Note:** You may get an error about CORS. This can be ignored, as it will be configured later in the lab.
 
 6.  Validate the website by clicking the **Products** link on the menu. If the products return, the connection to the database is successful.
 
@@ -969,7 +971,7 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 4.  Click on **Save**
 
-**Note:** Ensure the API URL is using **SSL** (https://), or you will see a CORS errors when loading the webpage.
+    > **Note:** Ensure the API URL is using **SSL** (https://), or you will see a CORS errors when loading the webpage.
 
 5.  Connect to the URL of the **contosofinanceweb** Web App
 

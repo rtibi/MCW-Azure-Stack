@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 
@@ -43,7 +43,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 2.  Specify a resource group name **AzureStack** and deploy the template
 
-**NOTE:** Please wait for the virtual machine to be provisioned prior to moving to the next step.
+    > **NOTE:** Please wait for the virtual machine to be provisioned prior to moving to the next step.
 
 3.  After the VM is provisioned, **connect** to establish a new Remote Desktop Session
 
@@ -65,7 +65,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 8.  Notice that Server Manager opens by default. On the left, click **Local Server**.
 
-![Local Server is selected in the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
+    ![Local Server is selected in the Server Manager menu.](images/Setup/image5.png "Server Manager menu")
 
 9.  On the right side of the pane, click **On** by **IE Enhanced Security Configuration**
 
@@ -86,13 +86,13 @@ For help with installation of the Azure Stack Development Kit, review the follow
     .\Install-ASDK.ps1
     ```
 
-When prompted enter:
+    When prompted enter:
 
--   Password for administrator: **demo\@pass123**
+    -   Password for administrator: **demo\@pass123**
 
--   Enter Azure AD User: Specify your Azure subscription user account
+    -   Enter Azure AD User: Specify your Azure subscription user account
 
--   Select ASK Version **1804** and press **C** to continue
+    -   Select ASK Version **1808** and press **C** to continue
 
 2.  It will take up to 6 hours to successfully install the Azure Stack developer kit
 
@@ -104,7 +104,7 @@ When prompted enter:
 
 4.  Once connected open Server Manager. On the left, click **Local Server**.  
 
-**NOTE:** Wait until installation is complete.
+    > **NOTE:** Wait until installation is complete.
 
 ### Task 3: Install PowerShell for Azure Stack
 
@@ -131,6 +131,7 @@ When prompted enter:
     Register-PSRepository -Default
     Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
     ```
+    > **Note**: If you are using the VM from the suggested template, the repository is already registered and you will receive an error that you can ignore.
 
 6.  Next, execute the following command to remove any previous versions of Azure PowerShell:
 
@@ -138,7 +139,7 @@ When prompted enter:
     Get-Module -ListAvailable | where-Object {$_.Name -like "Azure*"} | Uninstall-Module
     ```
 
-    > Note: You may see several errors, you can ignore these.
+    > **Note**: If you see any errors you can safely ignore them.
 
 7.  Remove any folders in the following folder that begin with Azure (if any).
     ```
@@ -155,7 +156,7 @@ When prompted enter:
 
     Use-AzureRmProfile -Profile 2017-03-09-profile -Force
 
-    Install-Module -Name AzureStack -RequiredVersion 1.2.11
+    Install-Module -Name AzureStack -RequiredVersion 1.4
     ```
 
 ### Task 4: Download the Latest Azure Stack Tools
@@ -210,7 +211,7 @@ In this task, execute all the commands from an elevated PowerShell console on th
     Register-AzureRmResourceProvider -ProviderNamespace Microsoft.AzureStack
     ```
 
-6.  Next, execute the following commands to register your Azure Stack installation. When prompted, login with the **azurestack.local\\azurestackadmin** account
+6.  Next, execute the following commands to register your Azure Stack installation. When prompted, login with the **azurestack.local\\azurestackadmin** account using **demo@pass123** for the password.
     ```
     Import-Module .\RegisterWithAzure.psm1
 
@@ -229,7 +230,7 @@ In this task, execute all the commands from an elevated PowerShell console on th
 
     ![Screenshot of the Resource group blade.](images/Setup/image12.png "Resource group blade")
 
-8.  To verify the registration was successful on the Azure Stack Host, navigate to the admin portal at <http://adminportal.local.azurestack.external>. Sign in using your Azure AD credentials used during the Azure Stack Development Kit installation.
+8.  To verify the registration was successful on the Azure Stack Host, navigate to the Azure Stack admin portal at <http://adminportal.local.azurestack.external>. Sign in using your Azure AD credentials used during the Azure Stack Development Kit installation.
 
 ### Task 6: Download VM Images to Azure Stack Marketplace
 
@@ -285,12 +286,12 @@ In this task, you will download the following images and artifacts which are nee
 
 -   Download **both** of the following images:
 
-    -   Windows Server 2016 Datacenter
+    -   Windows Server 2016 Datacenter - Pay as you use
 
-    -   Windows Server 2016 Datacenter - Server Core
+    -   Windows Server 2016 Datacenter - Server Core - Pay as you use
 
 8.  Once the products are downloaded, you will receive a notification
 
     ![Screenshot of the Downloading product finished notification.](images/Setup/image23.png "Downloading product finished notification")
 
-**Note:** These downloads will take some time depending upon your Azure Stack connectivity. Wait until they complete before proceeding to the next task.
+    > **Note:** These downloads will take some time depending upon your Azure Stack connectivity. Wait until they complete before proceeding to the next task.
