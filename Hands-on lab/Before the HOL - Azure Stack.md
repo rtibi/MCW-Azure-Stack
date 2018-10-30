@@ -264,13 +264,13 @@ In this task, execute all the commands from an elevated PowerShell console on th
 
 In this task, you will download the following images and artifacts which are needed for the resource providers installed later:
 
-    -   SQL Server 2017 on Windows Server 2016 Image
+   -   SQL Server 2017 on Windows Server 2016 Image
 
-    -   SQL IaaS Extension
+   -   SQL IaaS Extension
 
-    -   Windows Server 2016 -- Server Core Pay for Use
+   -   Windows Server 2016 -- Server Core Pay for Use
 
-    -   Windows Server 2016 Data Center Pay for Use
+   -   Windows Server 2016 Data Center Pay for Use
 
 1.  From within the Azure Stack Admin portal, click **Marketplace management**.
 
