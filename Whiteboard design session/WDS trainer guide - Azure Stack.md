@@ -9,7 +9,7 @@ Azure Stack
 </div>
 
 <div class="MCWHeader3">
-June 2018
+September 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -61,33 +61,35 @@ Thank you for taking time to support the whiteboard design sessions as a trainer
 
 An amazing trainer:
 
--   Creates a safe environment in which learning can take place
+-   Creates a safe environment in which learning can take place.
 
--   Stimulates the participant's thinking
+-   Stimulates the participant's thinking.
 
--   Involves the participant in the learning process
+-   Involves the participant in the learning process.
 
--   Manages the learning process (on time, on topic, and adjusting to benefit participants)
+-   Manages the learning process (on time, on topic, and adjusting to benefit participants).
 
--   Ensures individual participant accountability
+-   Ensures individual participant accountability.
 
--   Ties it all together for the participant
+-   Ties it all together for the participant.
 
--   Provides insight and experience to the learning process
+-   Provides insight and experience to the learning process.
 
--   Effectively leads the whiteboard design session discussion
+-   Effectively leads the whiteboard design session discussion.
 
--   Monitors quality and appropriateness of participant deliverables
+-   Monitors quality and appropriateness of participant deliverables.
 
--   Effectively leads the feedback process
+-   Effectively leads the feedback process.
 
-## Whiteboard design session flow
+## Whiteboard design session flow 
 
 Each whiteboard design session uses the following flow:
 
 **Step 1: Review the customer case study (15 minutes)**
 
-Outcome: Analyze your customer's needs
+**Outcome**
+
+Analyze your customer's needs.
 
 -   Customer's background, situation, needs and technical requirements
 
@@ -97,19 +99,23 @@ Outcome: Analyze your customer's needs
 
 **Step 2: Design a proof of concept solution (60 minutes)**
 
-Outcome: Prepare to present a solution for your target customer audience
+**Outcome**
 
--   Determine your target customer audience
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
--   Determine customer's business needs to address your solution
+-   Determine your target customer audience.
 
--   Design and diagram your solution
+-   Determine customer's business needs to address your solution.
 
--   Prepare to present your solution
+-   Design and diagram your solution.
+
+-   Prepare to present your solution.
 
 **Step 3: Present the solution (30 minutes)**
 
-Outcome: Present solution to your customer
+**Outcome**
+
+Present solution to your customer:
 
 -   Present solution
 
@@ -125,15 +131,15 @@ Outcome: Present solution to your customer
 
 Before conducting your first whiteboard design session:
 
--   Read the Student guide (including the case study) and Trainer guide
+-   Read the Student guide (including the case study) and Trainer guide.
 
--   Become familiar with all key points and activities
+-   Become familiar with all key points and activities.
 
--   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions
+-   Plan the point you want to stress, which questions you want to drive, transitions, and be ready to answer questions.
 
--   Prior to the whiteboard design session, discuss the case study to pick up more ideas
+-   Prior to the whiteboard design session, discuss the case study to pick up more ideas.
 
--   Make notes for later
+-   Make notes for later.
 
 ## During the whiteboard design session: Tips for an effective whiteboard design session
 
@@ -155,33 +161,37 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Ask questions** and get them to share to fully involve your group in the learning process.
 
-**Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience and leaves them more open to what you are presenting.
+**Ask first**, whenever possible. Before launching into a topic, learn your audience's opinions about it and experiences with it. Asking first enables you to assess their level of knowledge and experience, and leaves them more open to what you are presenting.
 
-**Wait for responses**. If you ask a question such as, "What is your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
+**Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
 #  Azure Stack whiteboard design session student guide
 
 ## Abstract and learning objectives 
+
 In this whiteboard design session, you will work with a group to design a hybrid cloud architecture using a combination of the Azure public cloud and Azure Stack. This functional architecture will enable customers to leverage their investments in Azure as a "cloud platform," rather than Azure as a "place."
 
 At the end of the session, you will be able to determine which systems are good candidates for the Azure public cloud, and which are better suited on Azure Stack.
 
 ## Step 1: Review the customer case study 
 
-**Outcome** 
+**Outcome**
 
-Analyze your customer’s needs.
+Analyze your customer's needs.
 
-Timeframe: 15 minutes 
+Timeframe: 15 minutes
 
-Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips. 
-1.  Meet your table participants and trainer 
-2.  Read all of the directions for steps 1–3 in the student guide
-3.  As a table team, review the following customer case study
+Directions: With all participants in the session, the facilitator/SME presents an overview of the customer case study along with technical tips.
+
+1.  Meet your table participants and trainer.
+
+2.  Read all of the directions for steps 1-3 in the student guide.
+
+3.  As a table team, review the following customer case study.
 
 ### Customer situation
 
-Contoso Finance is one of the largest banks in the United States with a significant amount of their revenue coming from their residential mortgage business. Their mortgage business is headquartered in Dallas, Texas. During a meeting with the newly appointed CTO Doreen Newton, the IT team learned that Contoso is shifting to a cloud first strategy after seeing firsthand the advantages of the cloud from Doreen's previous role leading her prior company through a digital transformation. Her message "I have seen how applications and infrastructures are deployed and run using Microsoft Azure with both PaaS and IaaS services. These capabilities can transform Contoso with more agility and long-term cost effectiveness" resonated with other members of the IT organization.
+Contoso Finance is one of the largest banks in the United States with a significant amount of their revenue coming from their residential mortgage business. Their mortgage business is headquartered in Dallas, Texas. During a meeting with the newly appointed CTO Doreen Newton, the IT team learned that Contoso is shifting to a cloud first strategy after seeing firsthand the advantages of the cloud from Doreen's previous role leading her prior company through a digital transformation. Her message, "I have seen how applications and infrastructures are deployed and run using Microsoft Azure with both PaaS and IaaS services. These capabilities can transform Contoso with more agility and long-term cost effectiveness." resonated with other members of the IT organization.
 
 Contoso's current systems run in their Dallas based datacenter hosted in VMWare based virtual machines. One of the primary applications they are interested in modernizing to take advantage of the cloud is their consumer facing mortgage application. This application is responsible for new applications and consumer access to their current mortgage information. The mortgage app is hosted in a public facing website on Microsoft Internet Information Server (IIS) with a backend database using SQL Server 2012. The application has several modules that run as Windows Services. These modules are responsible for running credit checks and generating PDFs for transactions. The application uses Microsoft Message Queue (MSMQ) for interacting between modules. The application also allows customers to download several publicly accessible PDF files that are brochures for their products.
 
@@ -193,29 +203,29 @@ Contoso has expressed to FT the need to embrace Microsoft Azure technologies as 
 
 With the goals in mind, Contoso has challenged FT to help use their mortgage application as the first application to be used with Microsoft Azure.
 
-![The Contoso Dallas Data Center diagram shows the flow between Contoso Mortgage customers and Contoso\'s web servers, application servers, and SQL servers.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image2.jpg "Diagram indicating the customer situation. Shows how data from Contoso mortgage customers moves from public facing web servers to a queue and from there move to application servers and SQL (sequel) servers")
+![The Contoso Dallas Data Center diagram shows the flow between Contoso Mortgage customers and Contoso's web servers, application servers, and SQL servers.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image2.jpg)
 
 ### Customer needs 
 
 Contoso is looking for FT to provide the following for their expansion into North America:
 
-1.  Design a hybrid-cloud architecture that is native Azure end-to-end without the need for hosting the application in a Contoso owned datacenter
+1.  Design a hybrid-cloud architecture that is native Azure end-to-end without the need for hosting the application in a Contoso owned datacenter.
 
-2.  The design should ensure that customer data is not stored in the Azure Cloud while also allowing future applications to be easily deployed in Azure with access to custom data regardless of where they are deployed
+2.  The design should ensure that customer data is not stored in the Azure Cloud while also allowing future applications to be easily deployed in Azure with access to custom data regardless of where they are deployed.
 
-3.  Deploy the application in a secure manner as to allow for the frontend applications to access the backend customer data
+3.  Deploy the application in a secure manner as to allow for the frontend applications to access the backend customer data.
 
-4.  Establish direct connectivity from the new regional headquarters in Dallas to the deployments. This will allow communication with existing systems and reporting until the rest of Contoso's services are moved to Azure in the future
+4.  Establish direct connectivity from the new regional headquarters in Dallas to the deployments. This will allow communication with existing systems and reporting until the rest of Contoso's services are moved to Azure in the future.
 
-5.  Allow for a consistent application deployment model using Azure ARM templates and CI/CD
+5.  Allow for a consistent application deployment model using Azure ARM templates and CI/CD.
 
-6.  Detail the taxonomy that will be leveraged for the hybrid-cloud including the Resource Providers (RP) This includes tenants, regions, subscriptions, offers, plans, services and quota
+6.  Detail the taxonomy that will be leveraged for the hybrid-cloud including the Resource Providers (RP) This includes tenants, regions, subscriptions, offers, plans, services and quota.
 
 ### Customer objections 
 
-1.  The Mortgage SQL DB cannot be hosted in the public cloud
+1.  The Mortgage SQL DB cannot be hosted in the public cloud.
 
-2.  Contoso staff is already stretched thin, so minimizing patching of systems and day-to-day management is very important
+2.  Contoso staff is already stretched thin, so minimizing patching of systems and day-to-day management is very important.
 
 3.  The developer team acknowledges that the existing application architecture is designed for running on Windows Virtual Machines, but PaaS is the future they envision. How can they move this application forward?
 
@@ -223,25 +233,27 @@ Contoso is looking for FT to provide the following for their expansion into Nort
 
 ### Infographic for common scenarios
 
-![In the Infographic for Common scenarios, Microsoft Azure (public) is connected to the Microsoft Azure Stoack (private / hosted) through Developers and IT.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image3.png "Infographic for Common scenarios")
+![In the Infographic for Common scenarios, Microsoft Azure (public) is connected to the Microsoft Azure Stoack (private / hosted) through Developers and IT.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image3.png)
 
 ## Step 2: Design a proof of concept solution
 
-**Outcome** 
+**Outcome**
 
-Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format. 
+Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 60 minutes
 
 **Business needs**
 
-Directions: With all participants at your table, answer the following questions and list the answers on a flip chart. 
-1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers? 
+Directions:  With all participants at your table, answer the following questions and list the answers on a flip chart:
+
+1.  Who should you present this solution to? Who is your target customer audience? Who are the decision makers?
+
 2.  What customer business needs do you need to address with your solution?
 
-**Design** 
+**Design**
 
-Directions: With all participants at your table, respond to the following questions on a flip chart.
+Directions: With all participants at your table, respond to the following questions on a flip chart:
 
 Design a hybrid-cloud architecture using Azure services that will make up the implementation for Contoso.
 
@@ -255,7 +267,7 @@ Identify how applications such as the Mortgage App and other infrastructure work
 
 Plan and Document Azure Stack taxonomy for this deployment.
 
-1.  Document each of the following areas of the taxonomy with details on how it will be setup.
+1.  Document each of the following areas of the taxonomy with details on how it will be setup:
 
     -   Cloud Operator
 
@@ -271,7 +283,7 @@ Plan and Document Azure Stack taxonomy for this deployment.
 
     -   Services / Resource Providers
 
-2.  Diagram your taxonomy
+2.  Diagram your taxonomy.
 
 Create a network design.
 
@@ -279,36 +291,45 @@ Create a network design.
 
 **Prepare**
 
-Directions: With all participants at your table: 
+Directions: With all participants at your table:
 
-1.  Identify any customer needs that are not addressed with the proposed solution
-2.  Identify the benefits of your solution
-3.  Determine how you will respond to the customer’s objections
+1.  Identify any customer needs that are not addressed with the proposed solution.
 
-Prepare a 15-minute chalk-talk style presentation to the customer. 
+2.  Identify the benefits of your solution.
+
+3.  Determine how you will respond to the customer's objections.
+
+Prepare a 15-minute chalk-talk style presentation to the customer.
 
 ## Step 3: Present the solution
 
 **Outcome**
- 
+
 Present a solution to the target customer audience in a 15-minute chalk-talk format.
 
 Timeframe: 30 minutes
 
-**Presentation** 
+**Presentation**
 
 Directions:
-1.  Pair with another table
-2.  One table is the Microsoft team and the other table is the customer
-3.  The Microsoft team presents their proposed solution to the customer
-4.  The customer makes one of the objections from the list of objections
-5.  The Microsoft team responds to the objection
-6.  The customer team gives feedback to the Microsoft team
-7.  Tables switch roles and repeat Steps 2–6
 
-## Wrap-up 
+1.  Pair with another table.
 
-Timeframe: 15 minutes
+2.  One table is the Microsoft team and the other table is the customer.
+
+3.  The Microsoft team presents their proposed solution to the customer.
+
+4.  The customer makes one of the objections from the list of objections.
+
+5.  The Microsoft team responds to the objection.
+
+6.  The customer team gives feedback to the Microsoft team.
+
+7.  Tables switch roles and repeat Steps 2-6.
+
+##  Wrap-up 
+
+Time frame: 15 minutes
 
 Directions: Tables reconvene with the larger group to hear the facilitator/SME share the preferred solution for the case study.
 
@@ -337,43 +358,43 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 ## Step 1: Review the customer case study
 
--   Check in with your table participants to introduce yourself as the trainer
+-   Check in with your table participants to introduce yourself as the trainer.
 
 -   Ask, "What questions do you have about the customer case study?"
 
--   Briefly review the steps and time frames of the whiteboard design session
+-   Briefly review the steps and timeframes of the whiteboard design session.
 
--   Ready, set, go! Let the table participants begin
+-   Ready, set, go! Let the table participants begin.
 
 ## Step 2: Design a proof of concept solution
 
--   Check in with your tables to ensure that they are transitioning from step to step on time
+-   Check in with your tables to ensure that they are transitioning from step to step on time.
 
--   Provide some feedback on their responses to the business needs and design
+-   Provide some feedback on their responses to the business needs and design.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
 
--   Provide feedback for their responses to the customer's objections
+-   Provide feedback for their responses to the customer's objections.
 
-    -   Try asking questions first that will lead the participants to discover the answers on their own
-
+    -   Try asking questions first that will lead the participants to discover the answers on their own.
+    
 ## Step 3: Present the solution
 
--   Determine which table will be paired with your table before Step 3 begins
+-   Determine which table will be paired with your table before Step 3 begins.
 
--   For the first round, assign one table as the presenting team and the other table as the customer
+-   For the first round, assign one table as the presenting team and the other table as the customer.
 
--   Have the presenting team present their solution to the customer team
+-   Have the presenting team present their solution to the customer team.
 
-    -   Have the customer team provide one objection for the presenting team to respond to
+    -   Have the customer team provide one objection for the presenting team to respond to.
 
-    -   The presentation, objections, and feedback should take no longer than 15 minutes
+    -   The presentation, objections, and feedback should take no longer than 15 minutes.
 
-    -   If needed, the trainer may also provide feedback
+    -   If needed, the trainer may also provide feedback.
 
 ## Wrap-up
 
--   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution
+-   Have the table participants reconvene with the larger session group to hear the facilitator/SME share the following preferred solution.
 
 ##  Preferred target audience
 
@@ -393,37 +414,37 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 
 After being engaged by Contoso and gathering the requirements from the client, FT has put forward a design which embraces the Azure platform, DevOps for development and deployment, and the data sovereignty issues discovered by Contoso (no customer data in the public cloud). The solution consists of using Azure public cloud in the South-Central Region and Azure Stack running in a FT Dallas datacenter.
 
-![Both Traffic manager and VPN connect Azure Public (South Central) with the Azure Stock FusionTomo Dallas Datacenter, which in turn connects via VPN to On-Premises.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image4.png "Preferred solution")
+![Both Traffic manager and VPN connect Azure Public (South Central) with the Azure Stock FusionTomo Dallas Datacenter, which in turn connects via VPN to On-Premises.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image4.png)
 
 Design a hybrid-cloud architecture using Azure services that will make up the implementation for Contoso:
 
--   Identify the overall application design you would propose for modernizing their existing application into Azure
+1. Identify the overall application design you would propose for modernizing their existing application into Azure.
 
-    -   Azure Web Apps and API Apps will replace the IIS servers for hosting the website and associated APIs
+    -   Azure Web Apps and API Apps will replace the IIS servers for hosting the website and associated APIs.
 
-    -   Azure Blob Storage will be used for storage of private and public PDF files
+    -   Azure Blob Storage will be used for storage of private and public PDF files.
 
-    -   Azure Storage Queues would replace passing messages using MSMQ
+    -   Azure Storage Queues would replace passing messages using MSMQ.
 
-    -   Azure Functions will replace the Windows Services
+    -   Azure Functions will replace the Windows Services.
 
-    -   Azure SQL Database will replace the existing SQL Servers
+    -   Azure SQL Database will replace the existing SQL Servers.
 
-    -   Azure Traffic Manager will be configured in Priority mode to route web traffic to either the Azure public Web App or the Web App on Azure Stack
+    -   Azure Traffic Manager will be configured in Priority mode to route web traffic to either the Azure public Web App or the Web App on Azure Stack.
 
-    -   Azure Content Deployment Network (CDN) to allow public files such as PDFs to be routed closer to customers for a faster download experience
+    -   Azure Content Deployment Network (CDN) to allow public files such as PDFs to be routed closer to customers for a faster download experience.
 
--   List the services and components that will be deployed to Azure public cloud. For each, provide their basic function in the system. Determine which Azure Region will be best suited for the deployment.
+2. List the services and components that will be deployed to Azure public cloud. For each, provide their basic function in the system. Determine which Azure Region will be best suited for the deployment.
 
     -   Azure public cloud: The South-Central Region will be used for public facing applications allowing the reuse of all of the code currently being run in production in Europe and Australia. The following applications will be deployed to Azure Global Cloud:
 
         -   Mortgage Application Web App
 
-        -   Azure Storage for publicly accessible PDF files
+        -   Azure Storage for publicly accessible PDF files.
 
-        -   Azure CDN for hosting publicly accessible PDF files
+        -   Azure CDN for hosting publicly accessible PDF files.
 
--   List the services and components that will be deployed to Azure Stack Cloud. For each, provide their basic function in the system.
+3. List the services and components that will be deployed to Azure Stack Cloud. For each, provide their basic function in the system.
 
     -   A new Azure Stack Region will be deployed into the FusionTomo datacenter in Dallas, TX. The following applications and VMs will be deployed into Azure Stack:
 
@@ -431,9 +452,9 @@ Design a hybrid-cloud architecture using Azure services that will make up the im
 
         -   Mortgage Applications and Mortgage Admin: Offers API, and Function App will be deployed to Azure App services in an Azure App Service Environment (due to ExpressRoute integration with Azure Stack). This will require the Azure Stack Azure App Resource Provider to be installed.
 
-        -   Azure Blob Storage for PDFs
+        -   Azure Blob Storage for PDFs.
 
-        -   Azure Queue Storage for the Mortgage Application messaging
+        -   Azure Queue Storage for the Mortgage Application messaging.
 
 Identify how applications such as the Mortgage App and other infrastructure workloads could be deployed in a consistent manner between Azure public cloud and Azure Stack.
 
@@ -441,31 +462,31 @@ Azure Resource Manager templates can be used to deploy supported services to bot
 
 A hybrid continuous integration/continuous delivery(CI/CD) pipeline enables you to build, test, and deploy your app to multiple clouds. A hybrid CI/CD pipeline can help you:
 
--   Initiate a new build based on code commits to your Visual Studio Team Services (VSTS) repository
+-   Initiate a new build based on code commits to your Visual Studio Team Services (VSTS) repository.
 
--   Automatically deploy your newly built code to Azure for user acceptance testing
+-   Automatically deploy your newly built code to Azure for user acceptance testing.
 
--   Once your code has passed testing, automatically deploy to Azure Stack
+-   Once your code has passed testing, automatically deploy to Azure Stack.
 
 Plan and Document Azure Stack Taxonomy for this deployment.
 
--   Cloud operator: FT will act as in this role as the Service Provider. FT will create and maintain the Azure Stack Infrastructure. This will include building out the hardware, software, and plans, offers and services of the taxonomy. Only FT will be able to access the Administrator Portal for the Azure Stack private cloud. Contoso will have access to use the service via the User Portal to build, manage and secure their deployments.
+-   **Cloud operator**: FT will act as in this role as the Service Provider. FT will create and maintain the Azure Stack Infrastructure. This will include building out the hardware, software, and plans, offers and services of the taxonomy. Only FT will be able to access the Administrator Portal for the Azure Stack private cloud. Contoso will have access to use the service via the User Portal to build, manage and secure their deployments.
 
--   Region: One Azure Stack region would be created in the FT datacenter for Contoso's operations in North America.
+-   **Region**: One Azure Stack region would be created in the FT datacenter for Contoso's operations in North America.
 
--   Tenant: Contoso will be setup as the sole tenant for their US based operations. This could be expanded to other tenants if they decided to enter other countries or regions such as Mexico, Canada or the Caribbean. This tenant will be able to use all of the offers and services detailed in the rest of this taxonomy. (If further separation is required, then another Region would have to be deployed.)
+-   **Tenant**: Contoso will be setup as the sole tenant for their US based operations. This could be expanded to other tenants if they decided to enter other countries or regions such as Mexico, Canada or the Caribbean. This tenant will be able to use all of the offers and services detailed in the rest of this taxonomy. (If further separation is required, then another Region would have to be deployed.)
 
--   Subscriptions: There will be at least two subscriptions, but the number is a decision that can be left to Contoso to create. The two types will be Production and Development to isolate the billing and charges from each of these deployments.
+-   **Subscriptions**: There will be at least two subscriptions, but the number is a decision that can be left to Contoso to create. The two types will be Production and Development to isolate the billing and charges from each of these deployments.
 
--   Plans and quotas: Plans are groupings of one or more services. As the provider, FT will create plans to offer to the Contoso tenant. The Contoso services will be enabled on two plans: production and development. All services will be allowed for each plan to support Contoso DevOps practices. Each service added to a plan can be configured with quota settings, and the Production and Development Plans will have different quotas. The quotas on the Development plan will be limited as to ensure that the production deployment is not starved of resources it might need.
+-   **Plans and quotas**: Plans are groupings of one or more services. As the provider, FT will create plans to offer to the Contoso tenant. The Contoso services will be enabled on two plans: production and development. All services will be allowed for each plan to support Contoso DevOps practices. Each service added to a plan can be configured with quota settings, and the Production and Development Plans will have different quotas. The quotas on the Development plan will be limited as to ensure that the production deployment is not starved of resources it might need.
 
--   Offers: There will be two offers for production and development. These will be assigned their respective Plan for Production and Development.
+-   **Offers**: There will be two offers for production and development. These will be assigned their respective Plan for Production and Development.
 
--   Services/Resource Providers (RP): The base Resource Providers: Compute RP, Network RP, Storage RP and KeyVault RP will all be enabled. The SQL Server RP will be enabled and configured. The Azure App RP will be enabled and configured (The Windows Server 2016, SQL Server 2017, SQL IaaS Extension for Azure Stack).
+-   **Services/Resource Providers (RP)**: The base Resource Providers: Compute RP, Network RP, Storage RP and KeyVault RP will all be enabled. The SQL Server RP will be enabled and configured. The Azure App RP will be enabled and configured (The Windows Server 2016, SQL Server 2017, SQL IaaS Extension for Azure Stack).
 
-    ![The Azure Stack Taxonomy displays as previously described.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image5.png "Azure Stack Taxonomy")
+    ![The Azure Stack Taxonomy displays as previously described.](images/Whiteboarddesignsessiontrainerguide-AzureStackimages/media/image5.png)
 
-Design Network connectivity between the Contoso Regional HQ in Dallas to Azure and Azure Stack that will allow future applications to be deployed in the public cloud or Azure Stack and still provide connectivity to customer or On-Premises data.
+1. Design Network connectivity between the Contoso Regional HQ in Dallas to Azure and Azure Stack that will allow future applications to be deployed in the public cloud or Azure Stack and still provide connectivity to customer or On-Premises data.
 
 -   The initial proof of concept will start with providing a S2S VPN between the virtual network the Azure Web App is connected to and Azure Stack and another S2S Gateway between the Azure Stack datacenter in FT and the Contoso Regional HQ.
 
@@ -473,13 +494,13 @@ Design Network connectivity between the Contoso Regional HQ in Dallas to Azure a
 
 ## Checklist of preferred objection handling
 
-1.  The Mortgage SQL DB cannot be hosted in the public cloud
+1.  The Mortgage SQL DB cannot be hosted in the public cloud.
 
     **Potential Answer:**
 
     The SQL Database containing the customer information will be hosted in Azure Stack in the FT datacenter. This will require the SQL DB Resource Provider to be running on Azure Stack. The data will never reside in the Azure Global Cloud.
 
-2.  Contoso will have a very limited staff to manage the US based operations, so minimizing patching of systems and day-to-day management is very important
+2.  Contoso will have a very limited staff to manage the US based operations, so minimizing patching of systems and day-to-day management is very important.
 
     **Potential Answer:**
 
@@ -499,6 +520,6 @@ Design Network connectivity between the Contoso Regional HQ in Dallas to Azure a
 
 ## Customer quote (to be read back to the attendees at the end)
 
-*Our plans to enter the North American Mortgage market were enabled by our Partner, FusionTomo helping us to leverage our investment in Azure as a platform with Azure Stack. We can move forward with our project timelines.*
+"Our plans to enter the North American Mortgage market were enabled by our Partner, FusionTomo helping us to leverage our investment in Azure as a platform with Azure Stack. We can move forward with our project timelines."
 
 -   Doreen Newton, CTO
