@@ -713,7 +713,7 @@ The first step to getting the website up and running is to configure the SQL Dat
     
     -- Tip in a production environment the edition should reflect the actual capabilities.
 
-        ![Fields in the Create SKU blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image97.png)
+       ![Fields in the Create SKU blade are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image97.png)
 
 6.  Review the Add a **SQL Hosting Server** Blade and click **Create**.
 
@@ -833,7 +833,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 3.  Click **Create**.
 
-    ![Create button screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image115.png")
+    ![Create button screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image115.png)
 
 4.  After the storage account has completed provisioning, open the storage account by clicking **More services,** **Storage accounts**, and storage account name.
 
