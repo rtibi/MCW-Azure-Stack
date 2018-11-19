@@ -97,7 +97,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 1.  Launch an elevated PowerShell console and execute the following commands:
 
-    ```
+    ```powershell
     cd C:\AzureStackOnAzureVM
 
     .\Install-ASDK.ps1
@@ -145,7 +145,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 5.  Execute the following command to trust the PSGallery repository:
 
-    ```
+    ```powershell
     Register-PSRepository -Default
     Set-PSRepository -Name "PSGallery" -InstallationPolicy Trusted
     ```
@@ -154,7 +154,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 6.  Next, execute the following command to remove any previous versions of Azure PowerShell:
 
-    ```
+    ```powershell
     Get-Module -ListAvailable | where-Object {$_.Name -like "Azure*"} | Uninstall-Module
     ```
 
@@ -168,7 +168,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 8.  Finally, execute the following command to install the Azure Stack PowerShell cmdlets:
 
-    ```
+    ```powershell
     # Install the AzureRM.Bootstrapper module. Select Yes when prompted to install NuGet
 
     Install-Module -Name AzureRm.BootStrapper
@@ -184,7 +184,7 @@ For help with installation of the Azure Stack Development Kit, review the follow
 
 1.  Using the previous elevated PowerShell console execute the following commands to download and extract the Azure Stack tools from GitHub.
 
-    ```
+    ```powershell
     # Change directory to the root directory.
 
     cd \
@@ -210,37 +210,37 @@ In this task, execute all the commands from an elevated PowerShell console on th
 
 1.  CD to the registration folder of the AzureStack-Tools-master folder.
 
-    ```
+    ```powershell
     CD C:\AzureStack-Tools-master\Registration
     ```
 
 2.  Execute the following command to login:
 
-    ```
+    ```powershell
     Add-AzureRmAccount -EnvironmentName AzureCloud
     ```
 
 3.  Next, execute the following command to view the Azure subscriptions available:
 
-    ```
+    ```powershell
     Get-AzureRmSubscription
     ```
 
 4.  Next, execute the following command and specify the subscription ID you want to register Azure Stack to.
 
-    ```
+    ```powershell
     Select-AzureRmSubscription -SubscriptionId [your subscription id here]
     ```
 
 5.  Register the Azure Stack resource provider with your subscription by executing the following command:
 
-    ```
+    ```powershell
     Register-AzureRmResourceProvider -ProviderNamespace Microsoft.AzureStack
     ```
 
 6.  Next, execute the following commands to register your Azure Stack installation. When prompted, login with the **azurestack.local\\azurestackadmin** account using **demo@pass123** for the password.
 
-    ```
+    ```powershell
     Import-Module .\RegisterWithAzure.psm1
 
     $AzureContext = Get-AzureRmContext
