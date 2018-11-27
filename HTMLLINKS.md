@@ -7,4 +7,3 @@
 
 [HOL step-by-step - Azure Stack.html](https://cloudworkshop.blob.core.windows.net/azure-stack/Hands-on%20lab/HOL%20step-by-step%20-%20Azure%20Stack.html)
 
-
