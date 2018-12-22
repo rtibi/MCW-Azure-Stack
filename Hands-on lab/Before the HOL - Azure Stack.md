@@ -30,12 +30,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [Azure Stack before the hands-on lab setup guide](#azure-stack-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Create a virtual machine to execute the lab](#task-1-create-a-virtual-machine-to-execute-the-lab)
-        - [Task 2: Install the Azure Stack Developer Kit](#task-2-install-the-azure-stack-developer-kit)
-        - [Task 3: Install PowerShell for Azure Stack](#task-3-install-powershell-for-azure-stack)
-        - [Task 4: Download the Latest Azure Stack Tools](#task-4-download-the-latest-azure-stack-tools)
-        - [Task 5: Register Azure Stack with Azure AD](#task-5-register-azure-stack-with-azure-ad)
-        - [Task 6: Download VM Images to Azure Stack Marketplace](#task-6-download-vm-images-to-azure-stack-marketplace)
+        - [Task 1: Create a virtual machine to execute the lab](#task-1--create-a-virtual-machine-to-execute-the-lab)
+        - [Task 2: Install the Azure Stack Developer Kit](#task-2--install-the-azure-stack-developer-kit)
+        - [Task 3: Install PowerShell for Azure Stack](#task-3--install-powershell-for-azure-stack)
+        - [Task 4: Download the Latest Azure Stack Tools](#task-4--download-the-latest-azure-stack-tools)
+        - [Task 5: Register Azure Stack with Azure AD](#task-5--register-azure-stack-with-azure-ad)
+        - [Task 6: Download VM Images to Azure Stack Marketplace](#task-6--download-vm-images-to-azure-stack-marketplace)
 
 <!-- /TOC -->
 
@@ -296,7 +296,6 @@ In this task, you will download the following images and artifacts which are nee
 
 6.  A notification will pop-up notifying you the product is being downloaded to Azure Stack.
 
-    ![Screenshot of the Downloading product notification.](images/Setup/image19.png)
 
 7.  In the Add from Azure search bar, type SQL IaaS, and press enter. The SQL IaaS Extension will appear in the search results. Click its name.
 
@@ -308,8 +307,6 @@ In this task, you will download the following images and artifacts which are nee
 
 9.  A notification will pop-up notifying you the product is being downloaded to Azure Stack.
 
-    ![Screenshot of the Downloading product notification.](images/Setup/image22.png)
-
 10. In the Add from Azure search bar, type **Windows Server**, and press **enter**.
 
 -   Download **both** of the following images:
@@ -319,8 +316,6 @@ In this task, you will download the following images and artifacts which are nee
     -   Windows Server 2016 Datacenter - Server Core - Pay as you use.
 
 8.  Once the products are downloaded, you will receive a notification.
-
-    ![Screenshot of the Downloading product finished notification.](images/Setup/image23.png)
 
     > **Note:** These downloads will take some time depending upon your Azure Stack connectivity. Wait until they complete before proceeding to the next task.
     
