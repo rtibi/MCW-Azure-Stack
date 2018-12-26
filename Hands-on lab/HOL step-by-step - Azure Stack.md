@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -31,35 +31,35 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Solution architecture](#solution-architecture)
     - [Help references](#help-references)
     - [Requirements](#requirements)
-    - [Exercise 1: Configure Azure Stack](#exercise-1-configure-azure-stack)
-        - [Task 1: Deploy the Azure Stack App Service Resource Provider](#task-1-deploy-the-azure-stack-app-service-resource-provider)
-            - [Sub Task 1: Download the Installer and Scripts](#sub-task-1-download-the-installer-and-scripts)
-            - [Sub Task 2: Create App Service Scripts](#sub-task-2-create-app-service-scripts)
-            - [Sub Task 3: Deploy Supporting File Server](#sub-task-3-deploy-supporting-file-server)
-            - [Sub Task 4: Deploying a Supporting SQL Server](#sub-task-4-deploying-a-supporting-sql-server)
-            - [Sub Task 5: Enable Contained Database Authentication](#sub-task-5-enable-contained-database-authentication)
-            - [Sub Task 6: Setup Application Identity](#sub-task-6-setup-application-identity)
-            - [Sub Task 7: Install the App Service Resource Provider](#sub-task-7-install-the-app-service-resource-provider)
-        - [Task 2: Deploy the Azure Stack SQL DB Resource Provider](#task-2-deploy-the-azure-stack-sql-db-resource-provider)
-        - [Task 3: Create Azure Stack Deployment Taxonomy for Tenets](#task-3-create-azure-stack-deployment-taxonomy-for-tenets)
-    - [Exercise 2: Deploy the SQL Hosting Server and DB on Azure Stack](#exercise-2-deploy-the-sql-hosting-server-and-db-on-azure-stack)
-        - [Task 1: Create SQL Hosting Server](#task-1-create-sql-hosting-server)
-        - [Task 2: Register resource providers in the tenant subscription](#task-2-register-resource-providers-in-the-tenant-subscription)
-        - [Task 3: Deploy SQL DB on Azure Stack](#task-3-deploy-sql-db-on-azure-stack)
-    - [Exercise 3: Deploy Contoso Financial Web Application](#exercise-3-deploy-contoso-financial-web-application)
-        - [Task 1: Create the Web App](#task-1-create-the-web-app)
-        - [Task 2: Provision an Azure Storage Account](#task-2-provision-an-azure-storage-account)
-        - [Task 3: Update the configuration strings](#task-3-update-the-configuration-strings)
-        - [Task 4: Publish the Contoso Financial Web Application](#task-4-publish-the-contoso-financial-web-application)
-    - [Exercise 4: Deploy the customer offers Web API](#exercise-4-deploy-the-customer-offers-web-api)
-        - [Task 1: Provision the offers Web API App](#task-1-provision-the-offers-web-api-app)
-        - [Task 2: Deploy the Contoso.Apps.Financial.Offers project](#task-2-deploy-the-contosoappsfinancialoffers-project)
-        - [Task 3: Update the Application Settings of the Web App with the API URL](#task-3-update-the-application-settings-of-the-web-app-with-the-api-url)
-    - [Exercise 5: Automating backend processes with Azure functions](#exercise-5-automating-backend-processes-with-azure-functions)
-        - [Task 1: Create an Azure function to generate PDF receipts](#task-1-create-an-azure-function-to-generate-pdf-receipts)
-    - [Exercise 6: Deploy Contoso Finance Admin website](#exercise-6-deploy-contoso-finance-admin-website)
-        - [Task 1: Provision the Contoso Finance Admin Web App](#task-1-provision-the-contoso-finance-admin-web-app)
-        - [Task 2: Deploy the call center admin Web App from Visual Studio](#task-2-deploy-the-call-center-admin-web-app-from-visual-studio)
+    - [Exercise 1: Configure Azure Stack](#exercise-1--configure-azure-stack)
+        - [Task 1: Deploy the Azure Stack App Service Resource Provider](#task-1--deploy-the-azure-stack-app-service-resource-provider)
+            - [Sub Task 1: Download the Installer and Scripts](#sub-task-1--download-the-installer-and-scripts)
+            - [Sub Task 2: Create App Service Scripts](#sub-task-2--create-app-service-scripts)
+            - [Sub Task 3: Deploy Supporting File Server](#sub-task-3--deploy-supporting-file-server)
+            - [Sub Task 4: Deploying a Supporting SQL Server](#sub-task-4--deploying-a-supporting-sql-server)
+            - [Sub Task 5: Enable Contained Database Authentication](#sub-task-5--enable-contained-database-authentication)
+            - [Sub Task 6: Setup Application Identity](#sub-task-6--setup-application-identity)
+            - [Sub Task 7: Install the App Service Resource Provider](#sub-task-7--install-the-app-service-resource-provider)
+        - [Task 2: Deploy the Azure Stack SQL DB Resource Provider](#task-2--deploy-the-azure-stack-sql-db-resource-provider)
+        - [Task 3: Create Azure Stack Deployment Taxonomy for Tenets](#task-3--create-azure-stack-deployment-taxonomy-for-tenets)
+    - [Exercise 2: Deploy the SQL Hosting Server and DB on Azure Stack](#exercise-2--deploy-the-sql-hosting-server-and-db-on-azure-stack)
+        - [Task 1: Create SQL Hosting Server](#task-1--create-sql-hosting-server)
+        - [Task 2: Register resource providers in the tenant subscription](#task-2--register-resource-providers-in-the-tenant-subscription)
+        - [Task 3: Deploy SQL DB on Azure Stack](#task-3--deploy-sql-db-on-azure-stack)
+    - [Exercise 3: Deploy Contoso Financial Web Application](#exercise-3--deploy-contoso-financial-web-application)
+        - [Task 1: Create the Web App](#task-1--create-the-web-app)
+        - [Task 2: Provision an Azure Storage Account](#task-2--provision-an-azure-storage-account)
+        - [Task 3: Update the configuration strings](#task-3--update-the-configuration-strings)
+        - [Task 4: Publish the Contoso Financial Web Application](#task-4--publish-the-contoso-financial-web-application)
+    - [Exercise 4: Deploy the customer offers Web API](#exercise-4--deploy-the-customer-offers-web-api)
+        - [Task 1: Provision the offers Web API App](#task-1--provision-the-offers-web-api-app)
+        - [Task 2: Deploy the Contoso.Apps.Financial.Offers project](#task-2--deploy-the-contosoappsfinancialoffers-project)
+        - [Task 3: Update the Application Settings of the Web App with the API URL](#task-3--update-the-application-settings-of-the-web-app-with-the-api-url)
+    - [Exercise 5: Automating backend processes with Azure functions](#exercise-5--automating-backend-processes-with-azure-functions)
+        - [Task 1: Create an Azure function to generate PDF receipts](#task-1--create-an-azure-function-to-generate-pdf-receipts)
+    - [Exercise 6: Deploy Contoso Finance Admin website](#exercise-6--deploy-contoso-finance-admin-website)
+        - [Task 1: Provision the Contoso Finance Admin Web App](#task-1--provision-the-contoso-finance-admin-web-app)
+        - [Task 2: Deploy the call center admin Web App from Visual Studio](#task-2--deploy-the-call-center-admin-web-app-from-visual-studio)
     - [After the hands-on lab](#after-the-hands-on-lab)
 
 <!-- /TOC -->
@@ -351,6 +351,10 @@ When prompted specify the following:
 
 #### Sub Task 7: Install the App Service Resource Provider
 
+**Note: Before you start the steps below, you need to download the custom script extension v1.9.0 from azure market place into your Azure Stack Market Place Management.** 
+
+Go to your **Azure Stack Marketplace Management - +Add from Azure - Type Custom Script Extension - Click Download.** It will take few minutes. Once completed move on with the steps below.**  
+
 1.  Next start the Azure Stack App Service resource provider deployment by navigating to C:\\HOL folder using File Explorer, and double click the **AppService.msi** file to start the installation.
 
 2.  Click **Deploy App Service or upgrade to the latest version**.
@@ -410,6 +414,8 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png)
 
+    **Note: Password for for all these three above services are demo@pass123**
+
 11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**.
 
     ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image47.png)
@@ -418,21 +424,23 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.3 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image48.png)
 
-13. Except the default for the platform image by clicking **Next**.
+13. At the Select Platform Image - select the 2016- Datacenter-latest from the drop down list and click **Next**
 
-    ![The default platform image displays in the Microsoft Azure App Service 1.3 window.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png)
+    ![The Microsoft Azure App Service 1.3 fields are set to the default settings.](images/Hands-onlabstepfor -by-step-AzureStackimages/media/image048.png)
 
 14. Specify the following user account for both administrator accounts and click Next.
 
--   User name: **appserviceadmin**
+-   User name: **appserviceadmin** (Keep same Worker role VM Admin and Other Role VM Admin)
 
--   Password: **demo\@pass123**
+-   Password: **demo\@pass123** (Keep same Worker role VM Admin and Other Role VM Admin)
 
     ![The Microsoft Azure App Service 1.3 window displays the roles and passwords for the app service cloud.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png)
 
 15. Click the Checkbox next to Select and click next to start the deployment and then click **Next**.
 
     ![The Microsoft Azure App Service 1.1 window displays with a summary of settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image51.png)
+
+    **Note: It may take upto 60 min to complete**
 
 16. The final step is to validate the App Service on Azure Stack installation. TO validate the App Service installation perform the following 2 steps:
 
@@ -521,7 +529,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![The Password field is selected in the Windows PowerShell ISE - Input page.](images/Hands-onlabstep-by-step-AzureStackimages/media/image64.png)
 
-    > **Note:** The script will run for at least 25 mins. Please wait until it completes prior to moving on to the next step.
+    > **Note:** The script will run for at least 60 mins. Please wait until it completes prior to moving on to the next step.
 
 16. Once the SQL RP is installed, the following message will appear. Close any Azure Stack portal sessions and restart them to update the portal UI.
 
@@ -647,21 +655,28 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![Azure Stack dashboard screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image88.png)
 
-22. Click **Get a subscription**.
+22. Click **Get a subscription**. 
+
 
     ![Get a subscription tile screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image89.png)
+
 
 23. Give it the name: **Production** and select the **PROD-Offer-1**. Click **Create**.
 
     -   ![In the Get a subscription blade, the Display name is Production. In the Choose an offer blade, PROD-Offer-1 is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image90.png)
 
+If this is not available in the dashboard then follow the steps below
+
+click **+All Resources - Subscription - + Add** 
+
+    **Display Name - Production
+    Offer - Prod-Offer-1 (existing offer)**
+
 24. You will need to Refresh the window to start using the new Subscription.
 
     ![Under the Subscription created message, the Refresh button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image91.png)
 
-25. Once the portal refreshes, click **More Services \> Subscriptions**.
-
-    ![In the Azure Stack window, More Services is selected, and under General, Subscriptions is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image92.png)
+25. Once the portal refreshes, click **All Services \> Subscriptions**.
 
 26. The Production Subscription will load, and you can click to review.
 
