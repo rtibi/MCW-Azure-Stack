@@ -736,7 +736,7 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 ### Task 2: Register resource providers in the tenant subscription
 
-1.  Launch the Azure Stack tenant portal and click More services -\> search for Subscriptions -\> click the subscription and then click Resource Providers.
+1.  Launch the Azure Stack tenant portal and click All services -\> search for Subscriptions -\> click the subscription and then click Resource Providers.
 
 2.  Click Register by each of the unregistered resource providers except Microsoft.Resources. After the RPs are registered your screen should look like this:
 
@@ -810,7 +810,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 1: Create the Web App
 
-1.  From within the Azure tenant portal, click New -\> Web + Mobile -\> Web App.
+1.  From within the Azure tenant portal, click **+Create a resource -\> Web -\> Web App.**
 
 2.  On the **Everything** blade, select **Web App** followed by **Create**.
 
@@ -829,6 +829,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
     -   App Name: **Specify a unique and valid URL (until the green check mark appears)**.
 
     -   Resource group: **ContosoFinanceWeb**
+    -   Application Insights - **Disabled**
 
         ![Create blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image112.png)
 
@@ -936,7 +937,7 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 ### Task 1: Provision the offers Web API App
 
-1.  Using the Azure Stack Tenant portal, click **+New**, **Web + Mobile**, and click **API App**.
+1.  Using the Azure Stack Tenant portal, click **+Create a resource**, **Web**, and click **API App**.
 
     ![Screenshot of the API App button.](images/Hands-onlabstep-by-step-AzureStackimages/media/image129.png)
 
@@ -1034,7 +1035,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
     ![In the Azure Stack Host, the Clone or download button is selected, and under Clone with HTTPS, the Download ZIP button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image139.png)
 
-2.  From the Tenant portal, click **+New**, **Web + Mobile**, and then click **Function App**.
+2.  From the Tenant portal, click **+Create a resource**, **Web**, and then click **Function App**.
 
     ![Function App option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image140.png)
 
