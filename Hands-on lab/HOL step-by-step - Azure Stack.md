@@ -1127,9 +1127,7 @@ In this exercise, you will provision the admin website to be used by employees t
 
 ### Task 1: Provision the Contoso Finance Admin Web App
 
-1.  In the Azure tenant portal, click **New**, **Web + mobile**, and select **Web App**.
-
-    ![The previously mentioned selections are made in the Azure tenant portal.](images/Hands-onlabstep-by-step-AzureStackimages/media/image151.png)
+1.  In the Azure tenant portal, click **+Create new resources**, **Web**, and select **Web App**.
 
 2.  Specify a **unique URL** for the Web App, ensure the **same App Service Plan** as well as the **ContosoFinanceWeb** resource group you have used throughout the lab are selected.
 
