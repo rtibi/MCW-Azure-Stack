@@ -30,12 +30,12 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [Azure Stack before the hands-on lab setup guide](#azure-stack-before-the-hands-on-lab-setup-guide)
     - [Requirements](#requirements)
     - [Before the hands-on lab](#before-the-hands-on-lab)
-        - [Task 1: Create a virtual machine to execute the lab](#task-1--create-a-virtual-machine-to-execute-the-lab)
-        - [Task 2: Install the Azure Stack Developer Kit](#task-2--install-the-azure-stack-developer-kit)
-        - [Task 3: Install PowerShell for Azure Stack](#task-3--install-powershell-for-azure-stack)
-        - [Task 4: Download the Latest Azure Stack Tools](#task-4--download-the-latest-azure-stack-tools)
-        - [Task 5: Register Azure Stack with Azure AD](#task-5--register-azure-stack-with-azure-ad)
-        - [Task 6: Download VM Images to Azure Stack Marketplace](#task-6--download-vm-images-to-azure-stack-marketplace)
+        - [Task 1: Create a virtual machine to execute the lab](#task-1-create-a-virtual-machine-to-execute-the-lab)
+        - [Task 2: Install the Azure Stack Developer Kit](#task-2-install-the-azure-stack-developer-kit)
+        - [Task 3: Install PowerShell for Azure Stack](#task-3-install-powershell-for-azure-stack)
+        - [Task 4: Download the Latest Azure Stack Tools](#task-4-download-the-latest-azure-stack-tools)
+        - [Task 5: Register Azure Stack with Azure AD](#task-5-register-azure-stack-with-azure-ad)
+        - [Task 6: Download VM Images to Azure Stack Marketplace](#task-6-download-vm-images-to-azure-stack-marketplace)
 
 <!-- /TOC -->
 
