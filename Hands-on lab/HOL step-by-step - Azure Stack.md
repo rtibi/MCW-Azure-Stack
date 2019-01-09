@@ -47,7 +47,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
         - [Task 2: Register resource providers in the tenant subscription](#task-2-register-resource-providers-in-the-tenant-subscription)
         - [Task 3: Deploy SQL DB on Azure Stack](#task-3-deploy-sql-db-on-azure-stack)
     - [Exercise 3: Deploy Contoso Financial Web Application](#exercise-3-deploy-contoso-financial-web-application)
-        - [Task 1: Create the Web App](#task-1--create-the-web-app)
+        - [Task 1: Create the Web App](#task-1-create-the-web-app)
         - [Task 2: Provision an Azure Storage Account](#task-2-provision-an-azure-storage-account)
         - [Task 3: Update the configuration strings](#task-3-update-the-configuration-strings)
         - [Task 4: Publish the Contoso Financial Web Application](#task-4-publish-the-contoso-financial-web-application)
