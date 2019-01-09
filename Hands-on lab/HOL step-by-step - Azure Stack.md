@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Solution architecture](#solution-architecture)
     - [Help references](#help-references)
     - [Requirements](#requirements)
-    - [Exercise 1: Configure Azure Stack](#exercise-1--configure-azure-stack)
+    - [Exercise 1: Configure Azure Stack](#exercise-1-configure-azure-stack)
         - [Task 1: Deploy the Azure Stack App Service Resource Provider](#task-1-deploy-the-azure-stack-app-service-resource-provider)
             - [Sub Task 1: Download the Installer and Scripts](#sub-task-1-download-the-installer-and-scripts)
             - [Sub Task 2: Create App Service Scripts](#sub-task-2-create-app-service-scripts)
