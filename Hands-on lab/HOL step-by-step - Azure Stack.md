@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-September 2018
+December 2018
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -351,6 +351,10 @@ When prompted specify the following:
 
 #### Sub Task 7: Install the App Service Resource Provider
 
+> **Note:** Before you start the steps below, you need to download the custom script extension v1.9.0 from azure market place into your Azure Stack Market Place Management.
+
+Go to your **Azure Stack Marketplace Management - +Add from Azure - Type Custom Script Extension - Click Download.** It will take few minutes. Once completed move on with the steps below.**  
+
 1.  Next start the Azure Stack App Service resource provider deployment by navigating to C:\\HOL folder using File Explorer, and double click the **AppService.msi** file to start the installation.
 
 2.  Click **Deploy App Service or upgrade to the latest version**.
@@ -376,7 +380,7 @@ When prompted specify the following:
 
 8.  Specify the following configuration for the file share:
 
--   File Share UNC Path: **Uuse the public IP from your file server noted earlier.**.
+-   File Share UNC Path: **Use the public IP from your file server noted earlier**.
 
 -   File Share Owner: **fileshareowner**
 
@@ -410,6 +414,8 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png)
 
+> **Note:** The password for all three above services is demo@pass123.
+
 11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**.
 
     ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image47.png)
@@ -418,15 +424,15 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.3 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image48.png)
 
-13. Except the default for the platform image by clicking **Next**.
+13. At the Select Platform Image - select the 2016- Datacenter-latest from the drop down list and click **Next**.
 
-    ![The default platform image displays in the Microsoft Azure App Service 1.3 window.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png)
+    ![The Microsoft Azure App Service 1.3 fields are set to the default settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image048.png)
 
 14. Specify the following user account for both administrator accounts and click Next.
 
--   User name: **appserviceadmin**
+-   User name: **appserviceadmin** (Keep same Worker role VM Admin and Other Role VM Admin)
 
--   Password: **demo\@pass123**
+-   Password: **demo\@pass123** (Keep same Worker role VM Admin and Other Role VM Admin)
 
     ![The Microsoft Azure App Service 1.3 window displays the roles and passwords for the app service cloud.](images/Hands-onlabstep-by-step-AzureStackimages/media/image49.png)
 
@@ -434,7 +440,9 @@ When prompted specify the following:
 
     ![The Microsoft Azure App Service 1.1 window displays with a summary of settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image51.png)
 
-16. The final step is to validate the App Service on Azure Stack installation. TO validate the App Service installation perform the following 2 steps:
+    >**Note**: It may take up to 60 minutes to complete.
+
+16. The final step is to validate the App Service on Azure Stack installation. To validate the App Service installation, perform the following 2 steps:
 
     -   In the Azure Stack admin portal, go to **Administration - App Service**.
 
@@ -521,7 +529,7 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![The Password field is selected in the Windows PowerShell ISE - Input page.](images/Hands-onlabstep-by-step-AzureStackimages/media/image64.png)
 
-    > **Note:** The script will run for at least 25 mins. Please wait until it completes prior to moving on to the next step.
+    > **Note:** The script will run for at least 60 minutes. Please wait until it completes prior to moving on to the next step.
 
 16. Once the SQL RP is installed, the following message will appear. Close any Azure Stack portal sessions and restart them to update the portal UI.
 
@@ -647,21 +655,28 @@ https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-sql-resource-prov
 
     ![Azure Stack dashboard screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image88.png)
 
-22. Click **Get a subscription**.
+22. Click **Get a subscription**. 
+
 
     ![Get a subscription tile screenshot.](images/Hands-onlabstep-by-step-AzureStackimages/media/image89.png)
+
 
 23. Give it the name: **Production** and select the **PROD-Offer-1**. Click **Create**.
 
     -   ![In the Get a subscription blade, the Display name is Production. In the Choose an offer blade, PROD-Offer-1 is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image90.png)
 
+If this is not available in the dashboard then follow the steps below
+
+click **+All Resources - Subscription - + Add** 
+
+    **Display Name - Production
+    Offer - Prod-Offer-1 (existing offer)**
+
 24. You will need to Refresh the window to start using the new Subscription.
 
     ![Under the Subscription created message, the Refresh button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image91.png)
 
-25. Once the portal refreshes, click **More Services \> Subscriptions**.
-
-    ![In the Azure Stack window, More Services is selected, and under General, Subscriptions is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image92.png)
+25. Once the portal refreshes, click **All Services \> Subscriptions**.
 
 26. The Production Subscription will load, and you can click to review.
 
@@ -721,7 +736,7 @@ The first step to getting the website up and running is to configure the SQL Dat
 
 ### Task 2: Register resource providers in the tenant subscription
 
-1.  Launch the Azure Stack tenant portal and click More services -\> search for Subscriptions -\> click the subscription and then click Resource Providers.
+1.  Launch the Azure Stack tenant portal and click All services -\> search for Subscriptions -\> click the subscription and then click Resource Providers.
 
 2.  Click Register by each of the unregistered resource providers except Microsoft.Resources. After the RPs are registered your screen should look like this:
 
@@ -795,7 +810,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
 
 ### Task 1: Create the Web App
 
-1.  From within the Azure tenant portal, click New -\> Web + Mobile -\> Web App.
+1.  From within the Azure tenant portal, click **+Create a resource -\> Web -\> Web App.**
 
 2.  On the **Everything** blade, select **Web App** followed by **Create**.
 
@@ -814,6 +829,7 @@ In this exercise, you will provision a website using the Azure Stack portal. The
     -   App Name: **Specify a unique and valid URL (until the green check mark appears)**.
 
     -   Resource group: **ContosoFinanceWeb**
+    -   Application Insights - **Disabled**
 
         ![Create blade fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image112.png)
 
@@ -921,7 +937,7 @@ In this exercise, you will provision an Azure API App using the Azure Stack port
 
 ### Task 1: Provision the offers Web API App
 
-1.  Using the Azure Stack Tenant portal, click **+New**, **Web + Mobile**, and click **API App**.
+1.  Using the Azure Stack Tenant portal, click **+Create a resource**, **Web**, and click **API App**.
 
     ![Screenshot of the API App button.](images/Hands-onlabstep-by-step-AzureStackimages/media/image129.png)
 
@@ -1019,7 +1035,7 @@ Contoso wants to automate the process of generating applications in PDF format a
 
     ![In the Azure Stack Host, the Clone or download button is selected, and under Clone with HTTPS, the Download ZIP button is selected.](images/Hands-onlabstep-by-step-AzureStackimages/media/image139.png)
 
-2.  From the Tenant portal, click **+New**, **Web + Mobile**, and then click **Function App**.
+2.  From the Tenant portal, click **+Create a resource**, **Web**, and then click **Function App**.
 
     ![Function App option screenshot](images/Hands-onlabstep-by-step-AzureStackimages/media/image140.png)
 
@@ -1111,9 +1127,7 @@ In this exercise, you will provision the admin website to be used by employees t
 
 ### Task 1: Provision the Contoso Finance Admin Web App
 
-1.  In the Azure tenant portal, click **New**, **Web + mobile**, and select **Web App**.
-
-    ![The previously mentioned selections are made in the Azure tenant portal.](images/Hands-onlabstep-by-step-AzureStackimages/media/image151.png)
+1.  In the Azure tenant portal, click **+Create new resources**, **Web**, and select **Web App**.
 
 2.  Specify a **unique URL** for the Web App, ensure the **same App Service Plan** as well as the **ContosoFinanceWeb** resource group you have used throughout the lab are selected.
 
