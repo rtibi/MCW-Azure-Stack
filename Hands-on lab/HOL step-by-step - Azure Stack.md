@@ -414,7 +414,7 @@ Go to your **Azure Stack Marketplace Management - +Add from Azure - Type Custom 
 
     ![The Microsoft Azure App Service 1.3 fields are set to the previously defined settings.](images/Hands-onlabstep-by-step-AzureStackimages/media/image46.png)
 
-> **Note:** The password for for all these three above services is demo@pass123.
+> **Note:** The password for all three above services is demo@pass123.
 
 11. On the next screen, specify the public IP and the credentials for your SQL Server VM and click **Next**.
 
@@ -442,7 +442,7 @@ Go to your **Azure Stack Marketplace Management - +Add from Azure - Type Custom 
 
     >**Note**: It may take up to 60 minutes to complete.
 
-16. The final step is to validate the App Service on Azure Stack installation. TO validate the App Service installation perform the following 2 steps:
+16. The final step is to validate the App Service on Azure Stack installation. To validate the App Service installation, perform the following 2 steps:
 
     -   In the Azure Stack admin portal, go to **Administration - App Service**.
 
