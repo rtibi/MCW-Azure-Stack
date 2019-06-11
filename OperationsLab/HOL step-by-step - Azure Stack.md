@@ -59,7 +59,7 @@ Contoso Finance is one of the largest banks in the United States with a signific
 
 ## Solution architecture
 
-![The Microsoft Azure Stack is made up of Mortgage Applications and Mortgage Admin databases, Offerings API, Storage Queue Mortgage Applications, Mortgage Applications, and SQL Web App DB and Customer Data.](images/Hands-onlabstep-by-step-AzureStackimages/media/image2.png)
+![The Microsoft Azure Stack scenario for this set of labs is made up of Mortgage Applications and Mortgage Admin databases, Offerings API, Storage Queue Mortgage Applications, Mortgage Applications, and SQL Web App DB and Customer Data.](images/Hands-onlabstep-by-step-AzureStackimages/media/image2.png)
 
 ## Help references
 |    |            |
@@ -102,7 +102,7 @@ Contoso Finance is one of the largest banks in the United States with a signific
 
 ### Task 2: Create a website (powershell)
 
-1. Connect to the tenant endpoint in PowerShell (eitehr ISE or VSCode) - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-powershell-configure-user 
+1. Connect to the tenant endpoint in PowerShell (either ISE or VSCode) - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-powershell-configure-user 
 2. Download appservice_Install01.json and appservice_Install_parameter.json files from address: https://github.com/JurislavP/Azure_AzureStack_Dev/tree/master/App01 
 
 2.	Edit appservice_Install_parameter.json file to fit your environment
