@@ -53,13 +53,6 @@ In this hands-on lab, you will deploy the Azure Stack Development Kit and deploy
 
 At the end of this hands-on lab, you will be better able to deploy and manage solutions running on Azure Stack.
 
-## Overview
-
-Contoso Finance is one of the largest banks in the United States with a significant amount of their revenue coming from their residential mortgage business. As part of Contoso's shift to a cloud first strategy they planning to migrate their loan web applications to a hybrid cloud solution. During the planning stages, Contoso realized they would not be able to retain their customer data in US based Azure regions due to corporate compliance policies and regulatory issues. They have selected Azure Stack as the deployment method to take advantage of Azure technologies while still maintaining compliance.
-
-## Solution architecture
-
-![The Microsoft Azure Stack scenario for this set of labs is made up of Mortgage Applications and Mortgage Admin databases, Offerings API, Storage Queue Mortgage Applications, Mortgage Applications, and SQL Web App DB and Customer Data.](images/Hands-onlabstep-by-step-AzureStackimages/media/image2.png)
 
 ## Help references
 |    |            |
