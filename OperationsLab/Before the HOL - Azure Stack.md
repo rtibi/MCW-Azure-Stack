@@ -52,7 +52,7 @@ Duration: !? hours
 1.  Connect to the ASDK VM
 2.  Install tools
 
-    > Note: except VScode, most of the next steps should be already configured on your VM - please check that the tools are there and you are able to configure them. VSCode is optional - you can perform all of the activities in the labs using just PowerSHell, but you may want to explore the VSCode user interface, becasue it makes interacting with Azure Stack using PowerSHell and ARM templaes more powerful.
+    > Note: except VScode, most of the next steps should be already configured on your VM - please check that the tools are there and you are able to configure them. VSCode is optional - you can perform all of the activities in the labs using just PowerShell, but you may want to explore the VSCode user interface, becasue it makes interacting with Azure Stack using PowerSHell and ARM templaes more powerful.
 
 - Install VSCode - https://code.visualstudio.com/
 - Install the following VSCode extensions
