@@ -52,7 +52,7 @@ Duration: !? hours
 1.  Connect to the ASDK VM
 2.  Install tools
 
-    > Note: except VScode, most of the next steps should be already configured on your VM - please check that the tools are there and you are able to configure them.
+    > Note: except VScode, most of the next steps should be already configured on your VM - please check that the tools are there and you are able to configure them. VSCode is optional - you can perform all of the activities in the labs using just PowerSHell, but you may want to explore the VSCode user interface, becasue it makes interacting with Azure Stack using PowerSHell and ARM templaes more powerful.
 
 - Install VSCode - https://code.visualstudio.com/
 - Install the following VSCode extensions
@@ -110,7 +110,7 @@ In this task, you will download the required images and artifacts which are need
 
     ![Marketplace management is selected in the Azure Stack Admin portal.](media/Before%20the%20HOL%20-%20Azure%20Stack-17-50-50.png)
 
-2. Download the required images:
+2. Download the required images. Some of these images may already be present in your lab environment – you can inspect and download any of the gallery items that are interesting to you:
    -   SQL Server 2017 on Windows Server 2016 Image
    -   SQL IaaS Extension
    -   Windows Server 2016 Data Center Pay for Use
