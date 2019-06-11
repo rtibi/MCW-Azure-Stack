@@ -126,7 +126,7 @@ In this task, you will download the required images and artifacts which are need
 
 In Azure, services are designed, deployed and offered to various regions by Microsoft engineers and operators. In Azure Stack the cloud operator deploys these services and makes them available to subscribed users using [quotas, plans, and offers](https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-plan-offer-quota-overview). This needs to be carefully designed in order to take into account capacity planning and growth/usage patterns as each of these elements are connected and define both the capabilities and quantities that users can consume. In these next exercises we will create quotas, plans, and offers:
 
-### Task 4: Create a new Quotas / Plans
+#### Task 3a: Create a new Quotas / Plans
 
 
 1.  In the **Azure Stack -- Administration** portal, select **All Services** and select **Plans** from **Administrative Resources**.
@@ -160,7 +160,7 @@ In Azure, services are designed, deployed and offered to various regions by Micr
 4.  Once complete, click **Create** and wait for the deployment
     operation to complete.
 
-### Task 5: Create a new offer and make it public
+#### Task 3b: Create a new offer and make it public
 
     > Note: if an offer is public, any user with access to the Azure Stack Tenant Portal can create a subscription based on it. This is great for test environemnts, but should be carefully considered in a production environment. 
 1.  In the **Azure Stack -- Administration** portal, select **All
@@ -204,7 +204,7 @@ In Azure, services are designed, deployed and offered to various regions by Micr
 Once you have completed this, your users can create subscriptions aligned to the offers you have created.
 
 
-### Task 6: Create assigned and self-service user subscriptions 
+#### Task 3c: Create assigned and self-service user subscriptions 
 
 Azure Stack user-subscriptions allow users to access the Azure Stack services being offered. (more info here https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-plan-offer-quota-overview#subscriptions).
 
