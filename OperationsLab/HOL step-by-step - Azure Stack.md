@@ -160,7 +160,7 @@ Using the Azure Stack QuickStart templates deploy a VM Scale Set of Windows VMs.
 
 11. In the **Select** textbox, type Azure Active Directory group **"ASTACK2018Admins"** to search for the group.  Select the **"ASTACK2018Admins"** group from the search results and click **Save** to add the co-administrators.
 
-## Task 4: Enable Multi-tenancy
+## Optional Task 2: Enable Multi-tenancy
 
 **Requirements**
 
