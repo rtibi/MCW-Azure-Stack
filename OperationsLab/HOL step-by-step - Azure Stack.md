@@ -141,7 +141,7 @@ Using the Azure Stack QuickStart templates deploy a VM Scale Set of Windows VMs.
 
 3.  Additionally, create following users: **User01, User02, User03**
 
-4.  Create and Group in AAD called **ASTACK2018Admins**
+4.  Create a Group in Azure Active Directory called **ASTACK2018Admins**
 
     a.  Group Type -- Security
 
