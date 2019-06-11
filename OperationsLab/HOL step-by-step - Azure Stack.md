@@ -126,7 +126,7 @@ Using the Azure Stack QuickStart templates deploy a VM Scale Set of Windows VMs.
 
 ## Exercise 2: RBAC and multi-tenancy
 
-## Task 1: Configure Role Based Access Control (RBAC)
+### Task 1: Configure Role Based Access Control (RBAC)
 
 1.  Go to your respective AAD that is used for installation of ASDK environment
 
@@ -160,7 +160,7 @@ Using the Azure Stack QuickStart templates deploy a VM Scale Set of Windows VMs.
 
 11. In the **Select** textbox, type Azure Active Directory group **"ASTACK2018Admins"** to search for the group.  Select the **"ASTACK2018Admins"** group from the search results and click **Save** to add the co-administrators.
 
-## Optional Task 2: Enable Multi-tenancy
+### Optional Task 2: Enable Multi-tenancy
 
 **Requirements**
 
