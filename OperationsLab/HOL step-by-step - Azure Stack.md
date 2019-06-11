@@ -102,6 +102,8 @@ Contoso Finance is one of the largest banks in the United States with a signific
 
 ### Task 2: Create a website (powershell)
 
+In this exercise, you must connect to the USER (tenant) endpoint, since you will be creating a web app as if you were a user of Azure Stack, not an operator.
+
 1. Connect to the tenant endpoint in PowerShell (either ISE or VSCode) - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-powershell-configure-user 
 2. Download appservice_Install01.json and appservice_Install_parameter.json files from address: https://github.com/JurislavP/Azure_AzureStack_Dev/tree/master/App01 
 
