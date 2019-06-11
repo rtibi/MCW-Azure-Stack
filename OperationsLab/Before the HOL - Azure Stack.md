@@ -100,7 +100,8 @@ Duration: !? hours
     Add-AzureRmAccount -EnvironmentName "AzureStackAdmin" -TenantId $TenantId
   
 
-> Note: type "Get-AzureRMSubscription" and note down the "TenantID".
+> Note: type "Get-AzureRMSubscription" and note down the "TenantID". You can see that you are now connected to your Azure Stack instance using commands like Get-AzsLocation, Get-AzsSubscription, or	Get-AzsUserSubscription.
+
 
 ### Task 2: Download VM Images to Azure Stack
 
