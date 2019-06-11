@@ -171,7 +171,7 @@ Using the Azure Stack QuickStart templates deploy a VM Scale Set of Windows VMs.
 
 **Requirements**
 
-1. Guest Azure Active Directory that is not used for Azure Stack installation
+1. Guest Azure Active Directory that is not used for Azure Stack installation (this AADis not part of the lab environment prepared for you - you must create or bring your own AAD tenant if you want to do this exercise)
 2. Global Admin account for guest AAD
 3. Azure Stack PowerShell Tools for configuration of Guest AAD
 
