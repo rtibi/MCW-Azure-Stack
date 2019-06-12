@@ -257,6 +257,9 @@ Whenever there is an issue, the Azure Stack Administration portal displays infor
 
 # 'Disconnected' Labs
 
+This section contains labs that apply to disconnected Azure Stack instances. You will use a connected Azure Stack, but pretend that it is disconnected. The air gap makes many tasks more difficult - especially those that take advantage of being able to access Azure Stack services and resources to configure and operate Azure Stack.
+
+
 ## Exercise 1- Connect to Disconnected Azure Stack using PowerShell as operator 
 
 COMING SOON!
