@@ -208,7 +208,9 @@ Once you have completed this, your users can create subscriptions aligned to the
 
 Azure Stack user-subscriptions allow users to access the Azure Stack services being offered. (more info here https://docs.microsoft.com/en-us/azure-stack/operator/azure-stack-plan-offer-quota-overview#subscriptions).
 
-  > Note: Users can subscribe to "Public Offers", or Azure Stack Operators can create a user-subscription on behalf of a user. When the Azure Stack Operator creates this user-subscription, it can also specify the "owner" of that user-subscription.  
+  > Note: Users can subscribe to "Public Offers", or Azure Stack Operators can create a user-subscription on behalf of a user. When the Azure Stack Operator creates this user-subscription, it can also specify the "owner" of that user-subscription.
+  
+  > Note 2: You will need to create some users in Azure Active Directory to assign them to these subscriptions. Log onto the AZURE portal (not the Azure Stack portal) and use the Azure Active Directory service to create two new users there called 'user1' and 'user2'. Use those users' full name in the steps below to assign them to the subscriptions.
 
 To add a new subscription, perform the following tasks in your Azure Stack environment:
 
