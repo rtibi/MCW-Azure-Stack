@@ -255,9 +255,21 @@ Whenever there is an issue, the Azure Stack Administration portal displays infor
 - Configure Azure Monitor, Update Management, Change Tracking, Inventory, and MAP solutions in Azure for your Azure Stack VMs - https://aka.ms/azstackupdatemgmt 
 
 
+# 'Disconnected' Labs
 
+## Exercise 1- Connect to Disconnected Azure Stack using PowerShell as operator 
 
-## After the hands-on lab 
+COMING SOON!
+
+## Exercise 2 – Azure Stack offline registration 
+
+COMING SOON!
+
+## Exercise 3 - Marketplace Download - Disconnected or partially connected scenario 
+
+COMING SOON!
+
+# After the hands-on lab 
 
 Duration: 10 minutes
 
