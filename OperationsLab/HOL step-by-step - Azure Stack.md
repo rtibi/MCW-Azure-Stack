@@ -179,16 +179,16 @@ Import-Module .\Identity\AzureStack.Identity.psm1
 ## The following Azure Resource Manager endpoint is for the ASDK. If you are in a multinode environment, contact your operator or service provider to get the endpoint.
 $adminARMEndpoint = "https://adminmanagement.local.azurestack.external"
 
-**Replace the value below with the Azure Stack directory**
+## Replace the value below with the Azure Stack directory
 $azureStackDirectoryTenant = "contoso.onmicrosoft.com"
 
-**Replace the value below with the guest tenant directory** 
+## Replace the value below with the guest tenant directory 
 $guestDirectoryTenantToBeOnboarded = "fabrikam.onmicrosoft.com"
 
-**Replace the value below with the name of the resource group in which the directory tenant registration resource should be created (resource group must already exist)**
+## Replace the value below with the name of the resource group in which the directory tenant registration resource should be created (resource group must already exist)
 $ResourceGroupName = "system.local"
 
-**Replace the value below with the region location of the resource group** 
+## Replace the value below with the region location of the resource group
 $location = "local"
 
 Register-AzSGuestDirectoryTenant -AdminResourceManagerEndpoint $adminARMEndpoint `
