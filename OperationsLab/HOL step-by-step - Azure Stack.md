@@ -33,7 +33,7 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Task 3: Use QuickStart templates](#task-3-use-quickstart-templates)
   - [Exercise 2: RBAC and multi-tenancy](#exercise-2-rbac-and-multi-tenancy)
     - [Task 1: Configure Role Based Access Control (RBAC)](#task-1-configure-role-based-access-control-rbac)
-    - [Task 2: Enable Multi-tenancy](#task-4-enable-multi-tenancy)
+    - [Task 2: Enable Multi-tenancy](#optional-task-2-enable-multi-tenancy)
   - [Exercise 3: Management and Operations](#exercise-3-management-and-operations)
     - [Task 1: Configure Azure Stack infrastructure backup](#task-1-configure-azure-stack-infrastructure-backup)
     - [Task 2: Log Collection](#task-2-log-collection)
