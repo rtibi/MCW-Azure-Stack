@@ -25,8 +25,6 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
 
 - [Azure Stack hands-on lab step-by-step](#azure-stack-hands-on-lab-step-by-step)
   - [Abstract and learning objectives](#abstract-and-learning-objectives)
-  - [Overview](#overview)
-  - [Solution architecture](#solution-architecture)
   - [Help references](#help-references)
   - [Requirements](#requirements)
   - [Exercise 1: Create Azure Stack resources](#exercise-1-create-azure-stack-resources)
@@ -34,14 +32,13 @@ Microsoft and the trademarks listed at https://www.microsoft.com/en-us/legal/int
     - [Task 2: Create a website (powershell)](#task-2-create-a-website-powershell)
     - [Task 3: Use QuickStart templates](#task-3-use-quickstart-templates)
   - [Exercise 2: RBAC and multi-tenancy](#exercise-2-rbac-and-multi-tenancy)
-  - [Task 1: Configure Role Based Access Control (RBAC)](#task-1-configure-role-based-access-control-rbac)
-  - [Task 4: Enable Multi-tenancy](#task-4-enable-multi-tenancy)
-  - [The following Azure Resource Manager endpoint is for the ASDK. If you are in a multinode environment, contact your operator or service provider to get the endpoint.](#the-following-azure-resource-manager-endpoint-is-for-the-asdk-if-you-are-in-a-multinode-environment-contact-your-operator-or-service-provider-to-get-the-endpoint)
-  - [Replace the value below with the guest tenant directory.](#replace-the-value-below-with-the-guest-tenant-directory)
+    - [Task 1: Configure Role Based Access Control (RBAC)](#task-1-configure-role-based-access-control-rbac)
+    - [Task 2: Enable Multi-tenancy](#task-4-enable-multi-tenancy)
   - [Exercise 3: Management and Operations](#exercise-3-management-and-operations)
     - [Task 1: Configure Azure Stack infrastructure backup](#task-1-configure-azure-stack-infrastructure-backup)
     - [Task 2: Log Collection](#task-2-log-collection)
     - [Task 3: Azure Monitor, Update and Configuration Management](#task-3-azure-monitor-update-and-configuration-management)
+  - ['Disconnected' Labs](#disconnected-labs)
   - [After the hands-on lab](#after-the-hands-on-lab)
 
 
