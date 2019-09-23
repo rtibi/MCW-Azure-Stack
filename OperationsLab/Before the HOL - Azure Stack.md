@@ -31,9 +31,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 1: Prepare the AzStack Operator station](#task-1-prepare-the-azstack-operator-station)
     - [Task 2: Download VM Images to Azure Stack](#task-2-download-vm-images-to-azure-stack)
     - [Task 3: Create a new quota, plan, and offer](#task-3-create-a-new-quota-plan-and-offer)
-  - [Task 4: Create a new Quotas / Plans](#task-4-create-a-new-quotas--plans)
-  - [Task 5: Create a new offer and make it public](#task-5-create-a-new-offer-and-make-it-public)
-  - [Task 2: Create assigned and self-service user subscriptions](#task-2-create-assigned-and-self-service-user-subscriptions)
+      - [Task 3a: Create a new Quotas / Plans](#task-3a-create-a-new-quotas--plans)
+      - [Task 3b: Create a new offer and make it public](#task-3b-create-a-new-offer-and-make-it-public)
+      - [Task 3c: Create assigned and self-service user subscriptions](#task-3c-create-assigned-and-self-service-user-subscriptions)
 
 # Azure Stack before the hands-on lab setup guide 
 
@@ -117,6 +117,8 @@ In this task, you will download the required images and artifacts which are need
    -   Windows Server 2016 Data Center Pay for Use
    -   Azure Monitor, Update and Configuration Management (extension)
    -   Azure Monitor Dependency Agent (extension)
+
+    > Note: before starting a download, check if the image is already downloaded (for custom images, look in the Region Management -> Compute -> VM Images). Some large VMs could take a long time to download.
 
 3.  Once the products are downloaded, you will receive a notification.
 
