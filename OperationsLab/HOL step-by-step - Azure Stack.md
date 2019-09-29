@@ -247,7 +247,7 @@ Whenever there is an issue, the Azure Stack Administration portal displays infor
 
 ### Task 3: Azure Monitor, Update and Configuration Management
 
->Note: for this exercise you will need access to an Azure Subscription - the management of these resources will not create any cost other than Azure Storage.
+>Note: for this exercise you will need access to an Azure Subscription - the management of these resources will not create any cost other than Azure Storage. The Update Management solution requires linking a Log Analytics workspace to your Automation account. For a definitive list of supported regions, see https://docs.microsoft.com/en-us/azure/automation/how-to/region-mappings. The region mappings do not affect the ability to manage virtual machines in a separate region than your Automation account.
 
 - Configure Azure Monitor, Update Management, Change Tracking, Inventory, and MAP solutions in Azure for your Azure Stack VMs - https://aka.ms/azstackupdatemgmt 
 
