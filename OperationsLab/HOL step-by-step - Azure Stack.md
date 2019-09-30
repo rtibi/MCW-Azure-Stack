@@ -99,7 +99,7 @@ In this exercise, you must connect to the USER (tenant) endpoint, since you will
 
 2.	Inspect the appservice_Install_parameter.json file, so you can see what adjustments you could make to fit your environment
 
-3.	Open PowerShell command prompt to the USER tenant of Azure Stack and run following commands. You do not do this as an ADMIN becasue you want the resource group to be available to the user:
+3.	Open PowerShell command prompt to the USER portal of Azure Stack and run following commands. You do not do this as an ADMIN becasue you want the resource group to be available to the user:
 
     ```Powershell
     New-AzureRmResourceGroup -Name "name of resource group" -Location local
