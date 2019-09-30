@@ -84,7 +84,7 @@ At the end of this hands-on lab, you will be better able to deploy and manage so
    >Note: if you've followed the steps in the "Before the HOL" document, login with the users that already have subscriptions assigned. Otherwise, you'll need to create new user-subscriptions.
 
 2. Click "Create new resource" and deploy these VMs from the Marketplace:
-   - Windows Server 20016
+   - Windows Server 2016
    - SQL Server 2017 on WS2016
   ![](media/../../OldVer%20/media/HOL%20step-by-step%20-%20Azure%20Stack-11-36-57.png)
 
