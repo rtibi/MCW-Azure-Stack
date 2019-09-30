@@ -95,7 +95,7 @@ At the end of this hands-on lab, you will be better able to deploy and manage so
 In this exercise, you must connect to the USER (tenant) endpoint, since you will be creating a web app as if you were a user of Azure Stack, not an operator.
 
 1. Connect to the tenant endpoint in PowerShell (either ISE or VSCode) - https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-powershell-configure-user 
-2. Download appservice_Install01.json and appservice_Install_parameter.json files from address: https://github.com/JurislavP/Azure_AzureStack_Dev/tree/master/App01 
+2. Download appservice_Install01.json and appservice_Install_parameter.json files from address: https://github.com/rtibi/MCW-Azure-Stack/blob/master/OperationsLab/appservices/appservice_Install01.json
 
 2.	Inspect the appservice_Install_parameter.json file, so you can see what adjustments you could make to fit your environment
 
